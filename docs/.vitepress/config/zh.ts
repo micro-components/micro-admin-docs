@@ -21,7 +21,7 @@ export const zh = defineConfig({
 
     footer: {
       message: "基于 MIT 许可发布",
-      copyright: `版权所有 © 2023-present Rock chen`,
+      copyright: `版权所有 ©2022-present MicroDesign UI`,
     },
 
     docFooter: {

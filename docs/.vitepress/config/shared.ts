@@ -4,7 +4,7 @@
  * @Email: luyb@xunzhaotech.com
  * @QQ: 1525572900
  * @Date: 2024-10-06 11:40:39
- * @LastEditTime: 2024-10-07 13:55:42
+ * @LastEditTime: 2024-10-07 18:07:34
  * @LastEditors: xunzhaotech
  */
 import { defineConfig } from "vitepress";
@@ -49,7 +49,7 @@ export const shared = defineConfig({
     },
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/chansee97/micro-admin" },
+      { icon: "github", link: "https://github.com/micro-components/micro-admin.git" },
       {
         icon: {
           svg: qq,
