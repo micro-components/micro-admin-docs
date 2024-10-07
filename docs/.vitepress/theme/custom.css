@@ -64,9 +64,9 @@
   --vp-c-green-3: #30a46c;
   --vp-c-green-soft: rgba(16, 185, 129, 0.14);
 
-  --vp-c-yellow-1: #915930;
-  --vp-c-yellow-2: #946300;
-  --vp-c-yellow-3: #9f6a00;
+  --vp-c-yellow-1: #f76208;
+  --vp-c-yellow-2: #f98139;
+  --vp-c-yellow-3: #faa16b;
   --vp-c-yellow-soft: rgba(234, 179, 8, 0.14);
 
   --vp-c-red-1: #b8272c;
@@ -212,10 +212,10 @@
   --vp-c-default-3: var(--vp-c-gray-3);
   --vp-c-default-soft: var(--vp-c-gray-soft);
 
-  --vp-c-brand-1: var(--vp-c-green-1);
-  --vp-c-brand-2: var(--vp-c-green-2);
-  --vp-c-brand-3: var(--vp-c-green-3);
-  --vp-c-brand-soft: var(--vp-c-green-soft);
+  --vp-c-brand-1: var(--vp-c-yellow-1);
+  --vp-c-brand-2: var(--vp-c-yellow-2);
+  --vp-c-brand-3: var(--vp-c-yellow-3);
+  --vp-c-brand-soft: var(--vp-c-yellow-soft);
 
   /* DEPRECATED: Use `--vp-c-brand-1` instead. */
   --vp-c-brand: var(--vp-c-brand-1);
