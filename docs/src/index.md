@@ -3,7 +3,7 @@ layout: home
 
 
 hero:
-  name: "micro-admin"
+  name: "MicroAdmin"
   text: "A clean and concise middle template"
   tagline: Vue3, Vite5, TypeScript, NaiveUI, Unocss
   image:
