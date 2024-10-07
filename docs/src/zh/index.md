@@ -2,11 +2,11 @@
 layout: home
 
 hero:
-  name: "micro-admin"
+  name: "MicroAdmin"
   text: "一个简洁、干净的中后台管理模板"
   tagline: Vue3、Vite5、TypeScript、NaiveUI、Unocss
   image:
-      src: /micro-admin.svg
+      src: /micro-admin.png
       alt: micro-admin
   actions:
     - theme: brand
