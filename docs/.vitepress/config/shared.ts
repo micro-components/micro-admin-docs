@@ -4,7 +4,7 @@
  * @Email: luyb@xunzhaotech.com
  * @QQ: 1525572900
  * @Date: 2024-10-06 11:40:39
- * @LastEditTime: 2024-10-06 11:43:04
+ * @LastEditTime: 2024-10-07 13:17:30
  * @LastEditors: xunzhaotech
  */
 import { defineConfig } from "vitepress";
@@ -19,7 +19,8 @@ export const shared = defineConfig({
   metaChunk: true,
 
   srcDir: "src",
-
+  base: '/micro-admin-docs/',
+  // base: process.env.BASE || '/',
   /* prettier-ignore */
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/micro-admin.svg' }],
