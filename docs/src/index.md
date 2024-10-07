@@ -7,8 +7,8 @@ hero:
   text: "A clean and concise middle template"
   tagline: Vue3, Vite5, TypeScript, NaiveUI, Unocss
   image:
-      src: /micro-admin.svg
-      alt: micro-admin
+      src: /micro-admin.png
+      alt: Micro-Admin
   actions:
     - theme: brand
       text: Learn about micro-admin

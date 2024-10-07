@@ -4,7 +4,7 @@
  * @Email: luyb@xunzhaotech.com
  * @QQ: 1525572900
  * @Date: 2024-10-06 11:40:39
- * @LastEditTime: 2024-10-07 13:17:30
+ * @LastEditTime: 2024-10-07 13:55:42
  * @LastEditors: xunzhaotech
  */
 import { defineConfig } from "vitepress";
@@ -23,7 +23,7 @@ export const shared = defineConfig({
   // base: process.env.BASE || '/',
   /* prettier-ignore */
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/micro-admin.svg' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/micro-admin.png' }],
     ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-JYHD4M2FMM' }],
     [
       'script',
@@ -36,7 +36,7 @@ export const shared = defineConfig({
   ],
 
   themeConfig: {
-    logo: { src: "/micro-admin.svg", width: 24, height: 24 },
+    logo: { src: "/micro-admin.png", width: 24, height: 24 },
 
     search: {
       provider: "algolia",
