@@ -5,6 +5,11 @@
   "type": "module",
 
   "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs",
+    "docs:preview": "vitepress preview docs",
+    "register:components": "vitepress-rc",
     "dev": "vitepress dev",
     "build": "vitepress build",
     "preview": "vitepress preview"
