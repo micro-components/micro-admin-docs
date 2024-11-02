@@ -6,7 +6,6 @@ export const en = defineConfig({
 
   themeConfig: {
     nav: nav(),
-
     sidebar: {
       "/guide/": { base: "/guide/", items: sidebarGuide() },
       "/other/": { base: "/other/", items: sidebarReference() },

@@ -59,7 +59,7 @@ function nav(): DefaultTheme.NavItem[] {
     },
     {
       text: "开发配置",
-      link: "/zh/dev/git",
+      link: "/zh/dev/",
       activeMatch: "/zh/dev/",
     },
     {
@@ -146,7 +146,7 @@ function sidebarEnv(): DefaultTheme.NavItem[] {
     {
       text: "开发工具",
       items: [
-        { text: "vscode插件", link: "vc-plugins" },
+        { text: "VSCode插件", link: "vc-plugins" },
         { text: "便利工具", link: "awesome-tools" }
       ],
     },

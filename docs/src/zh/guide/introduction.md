@@ -21,7 +21,7 @@
 ## 代码仓库
 
 - [Gitee](https://gitee.com/chansee97/micro-admin)
-- [Github](https://github.com/chansee97/micro-admin)
+- [Github](https://github.com/micro-components/micro-admin.git)
 
 ## 学习交流
 
