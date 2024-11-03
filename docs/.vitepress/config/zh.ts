@@ -144,6 +144,13 @@ function sidebarReference(): DefaultTheme.NavItem[] {
 function sidebarEnv(): DefaultTheme.NavItem[] {
   return [
     {
+      text: "项目配置",
+      items: [
+        { text: "项目创建", link: "create" },
+        { text: "环境变量", link: "env" }
+      ],
+    },
+    {
       text: "开发工具",
       items: [
         { text: "VSCode插件", link: "vc-plugins" },
