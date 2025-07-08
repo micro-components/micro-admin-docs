@@ -1,9 +1,14 @@
 {
   "name": "micro-admin-docs",
   "version": "1.0.0",
-  "description": "",
+  "description": "一个基于MicroDashboard的文档站点",
+  "keywords": [
+    "micro-admin",
+    "vitepress",
+    "documentation",
+    "docs"
+  ],
   "type": "module",
-
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
@@ -14,9 +19,13 @@
     "build": "vitepress build",
     "preview": "vitepress preview"
   },
-  "author": "",
+  "author": {
+    "name": "MicroAdmin Team",
+    "email": "1525572900@qq.com",
+    "url": "https://microadmin.cn"
+  },
   "license": "MIT",
   "devDependencies": {
-    "vitepress": "^v1.3.4"
+    "vitepress": "^1.6.3"
   }
 }
