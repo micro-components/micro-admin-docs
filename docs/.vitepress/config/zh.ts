@@ -99,7 +99,7 @@ function nav(): DefaultTheme.NavItem[] {
     },
   ];
 }
-function sidebarGuide(): DefaultTheme.NavItem[] {
+function sidebarGuide(): DefaultTheme.SidebarItem[] {
   return [
     {
       text: "指南",
@@ -133,7 +133,7 @@ function sidebarGuide(): DefaultTheme.NavItem[] {
     },
   ];
 }
-function sidebarReference(): DefaultTheme.NavItem[] {
+function sidebarReference(): DefaultTheme.SidebarItem[] {
   return [
     {
       text: "其他问题",
@@ -141,7 +141,7 @@ function sidebarReference(): DefaultTheme.NavItem[] {
     },
   ];
 }
-function sidebarEnv(): DefaultTheme.NavItem[] {
+function sidebarEnv(): DefaultTheme.SidebarItem[] {
   return [
     {
       text: "项目配置",

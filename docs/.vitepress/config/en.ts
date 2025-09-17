@@ -74,7 +74,7 @@ function nav(): DefaultTheme.NavItem[] {
     },
   ];
 }
-function sidebarGuide(): DefaultTheme.NavItem[] {
+function sidebarGuide(): DefaultTheme.SidebarItem[] {
   return [
     {
       text: "Guide",
@@ -108,7 +108,7 @@ function sidebarGuide(): DefaultTheme.NavItem[] {
     },
   ];
 }
-function sidebarReference(): DefaultTheme.NavItem[] {
+function sidebarReference(): DefaultTheme.SidebarItem[] {
   return [
     {
       text: "Other Issues",
@@ -116,7 +116,7 @@ function sidebarReference(): DefaultTheme.NavItem[] {
     },
   ];
 }
-function sidebarEnv(): DefaultTheme.NavItem[] {
+function sidebarEnv(): DefaultTheme.SidebarItem[] {
   return [
     {
       text: "Development Tools",
