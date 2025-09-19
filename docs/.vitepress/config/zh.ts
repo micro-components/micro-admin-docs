@@ -8,9 +8,9 @@ export const zh = defineConfig({
     nav: nav(),
 
     sidebar: {
-      "/zh/guide/": { base: "/zh/guide/", items: sidebarGuide() },
-      "/zh/other/": { base: "/zh/other/", items: sidebarReference() },
-      "/zh/dev/": { base: "/zh/dev/", items: sidebarEnv() },
+      "/guide/": { base: "/guide/", items: sidebarGuide() },
+      "/other/": { base: "/other/", items: sidebarReference() },
+      "/dev/": { base: "/dev/", items: sidebarEnv() },
     },
 
     editLink: {
@@ -54,23 +54,23 @@ function nav(): DefaultTheme.NavItem[] {
   return [
     {
       text: "指南",
-      link: "/zh/guide/introduction",
-      activeMatch: "/zh/guide/",
+      link: " /guide/introduction",
+      activeMatch: " /guide/",
     },
     {
       text: "开发配置",
-      link: "/zh/dev/",
-      activeMatch: "/zh/dev/",
+      link: " /dev/",
+      activeMatch: " /dev/",
     },
     {
       text: "其他问题",
-      link: "/zh/other/FAQ",
-      activeMatch: "/zh/other/",
+      link: " /other/FAQ",
+      activeMatch: " /other/",
     },
     {
       text: "捐助",
-      link: "/zh/donate",
-      activeMatch: "/zh/donate/",
+      link: " /donate",
+      activeMatch: " /donate/",
     },
     {
       text: "关于",

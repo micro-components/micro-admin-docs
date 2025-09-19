@@ -29,22 +29,22 @@ function nav(): DefaultTheme.NavItem[] {
   return [
     {
       text: "Guide",
-      link: "/guide/introduction",
+      link: "/en/guide/introduction",
       activeMatch: "/guide/",
     },
     {
       text: "Development",
-      link: "/dev/git",
+      link: "/en/dev/git",
       activeMatch: "/dev/",
     },
     {
       text: "Other",
-      link: "/other/FAQ",
+      link: "/en/other/FAQ",
       activeMatch: "/other/",
     },
     {
       text: "Donate",
-      link: "/donate",
+      link: "/en/donate",
       activeMatch: "/donate/",
     },
     {
