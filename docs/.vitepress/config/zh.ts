@@ -54,22 +54,22 @@ function nav(): DefaultTheme.NavItem[] {
   return [
     {
       text: "指南",
-      link: " /guide/introduction",
+      link: "/guide/introduction",
       activeMatch: " /guide/",
     },
     {
       text: "开发配置",
-      link: " /dev/",
+      link: "/dev/",
       activeMatch: " /dev/",
     },
     {
       text: "其他问题",
-      link: " /other/FAQ",
+      link: "/other/FAQ",
       activeMatch: " /other/",
     },
     {
       text: "捐助",
-      link: " /donate",
+      link: "/donate",
       activeMatch: " /donate/",
     },
     {
@@ -147,7 +147,8 @@ function sidebarEnv(): DefaultTheme.SidebarItem[] {
       text: "项目配置",
       items: [
         { text: "项目创建", link: "create" },
-        { text: "环境变量", link: "env" }
+        { text: "环境变量", link: "env" },
+        { text: "项目插件", link: "plugins"}
       ],
     },
     {
