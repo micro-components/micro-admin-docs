@@ -1,82 +1,85 @@
-# Getting Started
+# 开始使用
 
-## Environment Setup
+## 环境准备
 
-micro-admin is developed based on the latest Vite version, so it requires [Node.js](https://nodejs.org/en/) version 20.x to support it. The recommended package manager is [pnpm](https://pnpm.io/) version 8.x.
+micro-admin是基于最新Vite版本开发，所以需要[Node.js](https://nodejs.org/en/) 20.x 版本来支持。
+包管理器推荐使用 [pnpm](https://pnpm.io/) 8.x 版本
 
-- [Detailed Environment Setup Tutorial](/dev/nodejs)
+- [环境准备详细教程](/zh/dev/nodejs)
 
-## Get the Code
+## 获取代码
 
-### Download Artifact
+### 下载产物
 
-It is recommended to directly download the compressed package from [Releases](https://github.com/chansee97/micro-admin/releases)
+推荐直接下载[Releases](https://github.com/chansee97/micro-admin/releases)压缩包
 
-### Repository Clone
+### 仓库拉取
 
 ::: code-group
 
 ```shell [GitHub]
 git clone https://github.com/chansee97/micro-admin.git
+
 ```
 
 ```shell [Gitee]
 git clone https://gitee.com/chansee97/micro-admin.git
+
 ```
 
 :::
 
 ::: tip
-After cloning the repository, make sure to manually delete the `.git` directory and other unnecessary files to prevent unnecessary code and history from being committed.
+使用仓库拉取代码后，需要自行删除`.git`等目录，防止提交不必要的代码和记录
 :::
 
-## Local Start
+## 本地启动
 
-### Install Dependencies
+### 安装依赖
 
 ```bash
 pnpm i
 ```
 
-### Start Local Development
+### 启动本地开发
 
 ```bash
 pnpm dev
 ```
 
-### Build Artifacts
+### 构建产物
 
 ```bash
 pnpm build
 ```
 
-## Explanation of Script Commands
+## 脚本命令解释
 
 ```json
   "scripts": {
-    // Start local development mode with mode as dev and port 9980
+    // 启动本地开发模式，mode标识为dev，端口号9980
     "dev": "vite --mode dev --port 9980",
-    // Start local development mode with mode as test (default port 5173)
+    // 启动本地开发模式，mode标识为test（端口vite默认5173）
     "dev:test": "vite --mode test",
-    // Start local development mode with mode as prod (default port 5173)
+    // 启动本地开发模式，mode标识为prod（端口vite默认5173）
     "dev:prod": "vite --mode prod",
-    // Perform type checking and build with vite, mode as prod
+    // 进行类型检查 并使用vite构建，mode标识为prod
     "build": "vue-tsc --noEmit && vite build --mode prod",
-    // Perform type checking and build with vite, mode as dev
+    // 进行类型检查 并使用vite构建，mode标识为dev
     "build:dev": "vue-tsc --noEmit && vite build --mode dev",
-    // Perform type checking and build with vite, mode as test
+    // 进行类型检查 并使用vite构建，mode标识为test
     "build:test": "vue-tsc --noEmit && vite build --mode test",
-    // Preview the built artifacts, port 9981
+    // 预览打包后的产物，端口号9981
     "preview": "vite preview --port 9981",
-    // Check code using eslint
+    // 使用eslint检查代码
     "lint": "eslint .",
-    // Check and automatically fix code using eslint
+    // 使用eslint检查并自动修复代码
     "lint:fix": "eslint . --fix",
-    // Visualize viewing ESLint rule configuration
+    // 可视化查看eslint规则配置
     "lint:check": "npx @eslint/config-inspector",
-    // Analyze the bundle artifacts using vite-bundle-visualizer plugin
+    // 使用vite-bundle-visualizer插件分析打包产物
     "sizecheck": "npx vite-bundle-visualizer"
   }
 ```
 
-- Regarding `@eslint/config-inspector`, you can refer to this [Blog](https://eslint.org/blog/2024/04/eslint-config-inspector/)
+- 关于`@eslint/config-inspector`，可查看这篇[Blog](https://eslint.org/blog/2024/04/eslint-config-inspector/)

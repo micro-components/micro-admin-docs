@@ -1,45 +1,43 @@
 ---
 layout: home
 
-
 hero:
   name: "MicroAdmin"
-  text: "A clean and concise middle template"
-  tagline: Vue3, Vite5, TypeScript, NaiveUI, Unocss
+  text: "一个简洁、干净的中后台管理模板"
+  tagline: Vue3、Vite5、TypeScript、NaiveUI、Unocss
   image:
       src: /micro-admin.png
-      alt: Micro-Admin
+      alt: micro-admin
   actions:
     - theme: brand
-      text: Learn about micro-admin
-      link: /guide/introduction
+      text: 了解micro-admin
+      link: /zh/guide/introduction
     - theme: alt
       text: Github
       link: https://github.com/chansee97/micro-admin
     - theme: alt
-      text: Online Preview
+      text: 在线预览
       link: https://github.com/chansee97/micro-admin
 
 features:
-  - title: Latest Technology Stack
+  - title: 最新技术栈
     icon: 💻
-    details: Developed based on the latest technology stack such as Vue3, Vite5, TypeScript, NaiveUI, Unocss
-  - title: Network Requests
-    icon: 📦
-    details: Provide comprehensive network request encapsulation, unified response handling, and multi-scenario capabilities
-  - title: Permission Management
+    details: 基于Vue3、Vite5、TypeScript、NaiveUI、Unocss等最新技术栈开发
+  - title: 网络请求
+    icon:  📦
+    details: 提供完善的网络请求封装，提供统一的响应处理和多场景能力
+  - title: 权限管理
     icon: 🔑
-    details: Comprehensive front-end and back-end permission management solution
-  - title: Routing Configuration
+    details: 完善的前后端权限管理方案
+  - title: 路由配置
     icon: 📋
-    details: Support local static routes and dynamically generated routes returned by the backend, making routing simple and easy to configure
-  - title: Theme Adaptation
+    details: 支持本地静态路由和后台返回动态路由，路由简单易配置
+  - title: 主题适配
     icon: 🎨
-    details: Support dark theme adaptation, maintaining the Naive style of the interface
-  - title: Code Standard
+    details: 支持暗黑主题适配，界面样式保持Naive风格
+  - title: 代码规范
     icon: 📝
-    details: Only perform eslint validation during submission, without excessive restrictions, making development easier
-
+    details: 仅在提交时进行eslint校验，没有过多限制，开发更简便
 ---
 
 <style>

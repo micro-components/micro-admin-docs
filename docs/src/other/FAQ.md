@@ -1,21 +1,21 @@
-# Frequently Asked Questions
+# 常见问题
 
 ::: tip
-If you have any questions, please search for them in the [issues](https://github.com/chansee97/micro-admin/issues) before submitting. Commonly asked questions will be compiled and answered in the FAQ section. Your question will help more people!
+如果你有问题，请在[issue](https://github.com/chansee97/micro-admin/issues)中查找后在提交。对于高频出现的问题会收录到FAQ中统一回答。你的问题会帮助更多的人！
 :::
 
-## The page switch failed and displays a blank page
+## 页面切换失败，显示空白
 
-Please ensure that the page path is configured correctly and that the page maintains a **single root element**, as detailed in the official documentation [Transition Component TIP](https://v3.vuejs.org/guide/transitions-overview.html#the-transition-component)
+请确保页面路径配置正确，且页面保持**单标签根节点**， 详见官方说明 [Transition 组件 TIP](https://cn.vuejs.org/guide/built-ins/transition.html#the-transition-component)
 
 ```vue
-// Incorrect Example
+// 错误示例
 <template>
   <div> content 1 </div>
   <div> content 2 </div>
 </template>
 
-// Correct Example
+// 正确示例
 <template>
   <div>  // [!code ++]
     <div> content 1 </div>
@@ -24,9 +24,9 @@ Please ensure that the page path is configured correctly and that the page maint
 </template>
 ```
 
-## How to Remove Syntax Validation from the Build
+## 如何去除打包的语法校验
 
-Remove the validation statement from the build command
+删除打包命令中的校验语句
 
 ```json
 // package.json

@@ -1,93 +1,93 @@
-# Environment Variables
+# 环境变量
 
-## Common Variables
+## 通用变量
 
-Common variables are variables that should be consistent across all environments, such as project name, project root directory, etc. Define these variables in the `.env` file for use throughout the entire project.
+通用变量是所有环境都应该保持一致的变量，例如项目名称、项目根目录等。在`.env`文件中定义这些变量，以便在整个项目中使用。
 
 ### VITE_BASE_URL
 
-- **Type:** `string`
-- **Default:** `/`
+- **类型：** `string`
+- **默认：** `/`
 
-If your project needs to run under a sub-path, you can use the `VITE_BASE_URL` variable to set the sub-path. For example, if your project runs at `https://example.com/my-app`, you can set `VITE_BASE_URL` to `/my-app`. Relevant configurations in the project will be automatically adjusted.
+如果你的项目是需要某个子路径下运行的，那么你可以使用`VITE_BASE_URL`变量来设置子路径。例如，如果你的项目运行在`https://example.com/my-app`，你可以设置`VITE_BASE_URL`为`/my-app`。项目中相关配置会自动修改
 
 ### VITE_APP_NAME
 
-- **Type:** `string`
-- **Default:** `micro - Admin`
+- **类型：** `string`
+- **默认：** `micro - Admin`
 
-If your project requires a specific name, such as `micro-admin`, you can set the value of this variable to your project name.
+如果你的项目需要设置一个名称，例如`micro-admin`，你可以设置该变量的值为你的项目名称。
 
 ### VITE_ROUTE_LOAD_MODE
 
-- **Type:** `dynamic | static`
-- **Default:** `dynamic`
+- **类型：** `dynamic | static`
+- **默认：** `dynamic`
 
-The project provides two routing modes: `dynamic` and `static`. If you do not need to implement dynamic routing with the backend, you can set `VITE_AUTH_ROUTE_MODE` to `static`.
+项目中提供两种路由模式：`dynamic`和`static`。如果你不需要配合后端实现动态路由，你可以设置`VITE_AUTH_ROUTE_MODE`为`static`。
 
 ### VITE_HOME_PATH
 
-- **Type:** `string`
-- **Default:** `/dashboard/workbench`
+- **类型：** `string`
+- **默认：** `/dashboard/workbench`
 
-Set the path to redirect to after login. This should be the path where you want to redirect immediately after logging in, and it will also be used as the priority path when returning to the homepage in a 404 scenario.
+设置登陆后跳转地址,这里应当配置你登录完成后立即跳转的地址，404返回首页的情况下也是优先使用该路径
 
 ### VITE_STORAGE_PREFIX
 
-- **Type:** `string`
-- **Default:** `null`
+- **类型：** `string`
+- **默认：** `null`
 
-Set the prefix for global storage. For example, if `VITE_STORAGE_PREFIX=micro_`, then using `src\utils\storage.ts`, the data in `localStorage` and `sessionStorage` will have the `micro_` prefix added, for example, `micro_token`.
+设置全局存储的前缀，例如`VITE_STORAGE_PREFIX=micro_`，那么使用`src\utils\storage.ts`在`localStorage`和`sessionStorage`中的数据都会加上`micro_`前缀，例如`micro_token`。
 
 ### VITE_COPYRIGHT_INFO
 
-- **Type:** `string`
-- **Default:** `Copyright © 2024 chansee97`
+- **类型：** `string`
+- **默认：** `Copyright © 2024 chansee97`
 
-Footer copyright information.
+页面底部版权信息
 
 ### VITE_AUTO_REFRESH_TOKEN
 
-- **Type:** `Y | N`
-- **Default:** `Y`
+- **类型：** `Y | N`
+- **默认：** `Y`
 
-Whether to use auto refresh token. When disabled, expired tokens will directly return to the login page.
+是否使用自动刷新token，关闭后token过期将直接返回登录页面
 
 ### VITE_DEFAULT_LANG
 
-- **Type:** `zhCN | enUS`
-- **Default:** `enUS`
+- **类型：** `zhCN | enUS`
+- **默认：** `enUS`
 
-Default language configuration used in the project. If it does not work, please clear the browser's local cache.
+项目中默认使用的多语言配置，如果无效请清空浏览器本地缓存
 
-## Development Environment
+## 开发环境
 
-Development environment variables are variables that are only toggled during development, such as whether to enable proxy, etc. Define these variables in the `.env.dev` file.
+开发环境变量是只有在开发中才会切换的变量，例如是否开启代理等。在`.env.dev`文件中定义这些变量。
 
 ### VITE_HTTP_PROXY
 
-- **Type:** `Y | N`
-- **Default:** `N`
+- **类型：** `Y | N`
+- **默认：** `N`
 
-If your project needs to use a proxy to access backend APIs, you can set `VITE_HTTP_PROXY` to `Y` to enable the proxy.
+如果你的项目需要使用代理来访问后端接口，你可以设置`VITE_HTTP_PROXY`为`Y`来开启代理。
 ::: warning
-This configuration is only effective in the development environment. The frontend cannot handle cross-origin issues in the production environment.
+该配置仅对开发环境有效，前端无法处理生产环境的跨域问题
 :::
 
-## Production Environment
+## 生产环境
 
-Production environment variables are variables that are only needed during production or building, such as whether to enable gzip compression, etc. Define these variables in the `.env.prod` file.
+生产环境变量是只有在生产或构建产物时才需要的变量，例如是否开启gzip压缩等。在`.env.prod`文件中定义这些变量。
 
 ### VITE_BUILD_COMPRESS
 
-- **Type:** `Y | N`
-- **Default:** `N`
+- **类型：** `Y | N`
+- **默认：** `N`
 
-If your project needs to enable artifact compression, you can set `VITE_BUILD_COMPRESS` and `VITE_COMPRESS_TYPE` to enable compression.
+如果你的项目需要开启产物压缩，你可以设置`VITE_BUILD_COMPRESS`和`VITE_COMPRESS_TYPE`来开启压缩
 
 ### VITE_COMPRESS_TYPE
 
-- **Type:** `gzip | brotliCompress | deflate | deflateRaw`
-- **Default:** `gzip`
+- **类型：** `gzip | brotliCompress | deflate | deflateRaw`
+- **默认：** `gzip`
 
-Set the compression algorithm.
+设置压缩算法
