@@ -2,7 +2,7 @@
 
 ## 项目简介
 
-[micro-admin](https://github.com/chansee97/micro-admin)是一个基于Vue3、Vite5、Typescript、Naive UI, 简洁干净后台管理模板，用简单的方式实现完整功能，并尽可能的考虑代码规范，易读易理解无过度封装，方便二次开发。
+[Micro-Admin](https://github.com/micro-components/micro-admin)是一个基于Vue3、Vite5、Typescript、Naive UI, 简洁干净后台管理模板，用简单的方式实现完整功能，并尽可能的考虑代码规范，易读易理解无过度封装，方便二次开发。](https://github.com/chansee97/micro-admin)是一个基于Vue3、Vite5、Typescript、Element Plus, 简洁干净后台管理模板，用简单的方式实现完整功能，并尽可能的考虑代码规范，易读易理解无过度封装，方便二次开发。
 
 - [micro-Admin 预览](https://micro-admin-site.netlify.app/)
 - [micro-Admin 文档](https://micro-admin-docs.netlify.app/)
@@ -23,6 +23,11 @@
 - [Gitee](https://gitee.com/chansee97/micro-admin)
 - [Github](https://github.com/micro-components/micro-admin.git)
 
+## 技术栈
+- 开发框架：Vue3、TypeScript、Vite、Element-Plus、SCSS
+- 代码规范：Eslint、Prettier、Stylelint、Husky、Lint-staged、cz-git
+## 浏览器支持
+Chrome、Edge、Firefox、Safari、Opera 等现代浏览器。
 ## 学习交流
 
 micro-Admin 是完全开源免费的项目，目前仍然在优化迭代中，旨在帮助开发者更方便地进行中大型管理系统开发，有使用问题欢迎在交流群内提问。
