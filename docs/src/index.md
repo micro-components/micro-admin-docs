@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "MicroAdmin"
-  text: "一个简洁、干净的中后台管理模板"
+  text: "一个简洁、干净的企业级中后台管理模板"
   tagline: Vue3、Vite5、TypeScript、Element-Plus、Unocss
   image:
       src: /micro-admin.png
