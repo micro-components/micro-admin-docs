@@ -49,7 +49,7 @@ export const shared = defineConfig({
     },
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/micro-components/micro-admin.git" },
+      { icon: "github", link: "https://github.com/micro-components/micro-design-admin" },
       {
         icon: {
           svg: qq,

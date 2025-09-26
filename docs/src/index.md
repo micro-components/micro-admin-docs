@@ -14,10 +14,10 @@ hero:
       link: /guide/introduction
     - theme: alt
       text: Github
-      link: https://github.com/chansee97/micro-admin
+      link: https://github.com/micro-components/micro-design-admin
     - theme: alt
       text: 在线预览
-      link: https://github.com/chansee97/micro-admin
+      link: https://github.com/micro-components/micro-design-admin
 
 features:
   - title: 最新技术栈
@@ -38,26 +38,22 @@ features:
   - title: 代码规范
     icon: 📝
     details: 仅在提交时进行eslint校验，没有过多限制，开发更简便
+  - title: 主流后端技术栈
+    icon: 🚀
+    details: 采用Spring Boot、Spring Security、MyBatis Plus、Validator、Swagger等主流技术栈
+  - title: 模块化架构
+    icon: 🧩
+    details: 后端采用模块化架构，按照功能拆分成多个Maven Module，单一职责，开发高效率，系统易维护
+  - title: 前后端分离
+    icon: 🔄
+    details: 前后端完全分离，前端基于Vue + ElementUI界面，后端基于Spring MVC提供RESTful API接口
+  - title: 代码生成器
+    icon: ⚙️
+    details: 配置好表信息，一键生成前后端代码，包含增删改查、导出、权限控制、参数校验、接口文档、单元测试、Vue等
+  - title: 功能小而美
+    icon: ✨
+    details: 内置RBAC功能权限、数据权限、SaaS多租户、工作流、操作日志、三方登录、支付退款、短信、商城等功能
+  - title: 多种数据库
+    icon: 💾
+    details: 支持MySQL、Oracle、PostgreSQL、SQL Server、国产达梦DM、大金、TiDB等多种数据库
 ---
-
-<style>
-:root {
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #26e19c 50%, #28db2e);
-
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, #8fe992 50%, #8bee8f 50%);
-  --vp-home-hero-image-filter: blur(44px);
-}
-
-@media (min-width: 640px) {
-  :root {
-    --vp-home-hero-image-filter: blur(56px);
-  }
-}
-
-@media (min-width: 960px) {
-  :root {
-    --vp-home-hero-image-filter: blur(68px);
-  }
-}
-</style>
