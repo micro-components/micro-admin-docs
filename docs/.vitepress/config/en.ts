@@ -38,6 +38,11 @@ function nav(): DefaultTheme.NavItem[] {
       activeMatch: "/dev/",
     },
     {
+      text: "Docs",
+      link: "/en/docs/",
+      activeMatch: " /docs/",
+    },
+    {
       text: "Other",
       link: "/en/other/FAQ",
       activeMatch: "/other/",

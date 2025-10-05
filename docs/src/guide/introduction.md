@@ -2,10 +2,11 @@
 
 ## 项目简介
 
-[Micro-Admin](https://github.com/micro-components/micro-admin)是一个基于Vue3、Vite5、Typescript、Naive UI, 简洁干净后台管理模板，用简单的方式实现完整功能，并尽可能的考虑代码规范，易读易理解无过度封装，方便二次开发。](https://github.com/chansee97/micro-admin)是一个基于Vue3、Vite5、Typescript、Element Plus, 简洁干净后台管理模板，用简单的方式实现完整功能，并尽可能的考虑代码规范，易读易理解无过度封装，方便二次开发。
+[Micro-Admin](https://github.com/micro-components/micro-admin)是一个基于Vue3、Vite5、Typescript、Naive UI, 简洁干净后台管理模板，用简单的方式实现完整功能，并尽可能的考虑代码规范，易读易理解无过度封装，方便二次开发。](https://github.com/micro-components/micro-design-admin)是一个基于Vue3、Vite5、Typescript、Element Plus, 简洁干净后台管理模板，用简单的方式实现完整功能，并尽可能的考虑代码规范，易读易理解无过度封装，方便二次开发。
 
-- [micro-Admin 预览](https://micro-admin-site.netlify.app/)
-- [micro-Admin 文档](https://micro-admin-docs.netlify.app/)
+- [Micro-Admin 预览](https://micro-admin-site.netlify.app/)
+- [Micro-Admin 文档](https://micro-admin-docs.netlify.app/)
+- [Micro-NextJS全栈](https://micro-admin-docs.netlify.app/)
 
 ## 特性
 

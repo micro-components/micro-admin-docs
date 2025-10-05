@@ -11,6 +11,7 @@ export const zh = defineConfig({
       "/guide/": { base: "/guide/", items: sidebarGuide() },
       "/other/": { base: "/other/", items: sidebarReference() },
       "/dev/": { base: "/dev/", items: sidebarEnv() },
+      "/docs/": { base: "/docs/", items: sidebarDocs() },
     },
 
     editLink: {
@@ -61,6 +62,11 @@ function nav(): DefaultTheme.NavItem[] {
       text: "开发配置",
       link: "/dev/",
       activeMatch: " /dev/",
+    },
+    {
+      text: "开发文档",
+      link: "/docs/",
+      activeMatch: " /docs/",
     },
     {
       text: "其他问题",
@@ -130,6 +136,26 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
     {
       text: "相关内容",
       items: [{ text: "配套后端项目", link: "backend-project" }],
+    },
+  ];
+}
+function sidebarDocs(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: "介绍",
+      items: [
+        { text: "开发文档", link: "introduction" },
+        { text: "开发文档", link: "get-start" },
+        { text: "开发文档", link: "directory-structure" },
+      ],
+    },
+    {
+      text: "开发文档",
+      items: [
+        { text: "开发文档", link: "introduction" },
+        { text: "开发文档", link: "get-start" },
+        { text: "开发文档", link: "directory-structure" },
+      ],
     },
   ];
 }
