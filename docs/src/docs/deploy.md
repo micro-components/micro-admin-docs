@@ -115,3 +115,312 @@ docker run -d --name micro-admin -p 80:80 micro-admin-web:latest
 - 环境变量不生效：确认构建时注入了正确环境变量；纯静态产物无法在运行时修改构建时写死的变量
 
 如需针对特定平台（如阿里云 OSS、腾讯云 COS、GitHub Pages）提供详细步骤，请告知你的目标平台与部署方式。
+我将为您详细介绍Next.js项目的多种部署方式。
+
+## 1. Vercel 部署（推荐）
+
+### 优势
+- Next.js官方团队开发，完美支持所有功能
+- 自动优化和CDN加速
+- 简单的Git集成
+
+### 部署步骤
+```bash
+# 安装Vercel CLI
+npm i -g vercel
+
+# 部署
+vercel
+
+# 或使用生产环境部署
+vercel --prod
+```
+
+### 环境变量配置
+在项目根目录创建 `.env` 文件：
+```env
+NEXT_PUBLIC_API_URL=https://api.example.com
+DATABASE_URL=your_database_url
+SECRET_KEY=your_secret_key
+```
+
+在Vercel控制台添加相同的环境变量。
+
+## 2. 静态导出部署
+
+### 配置 next.config.js
+```javascript
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+  trailingSlash: true,
+  images: {
+    unoptimized: true
+  }
+}
+
+module.exports = nextConfig
+```
+
+### 构建和导出
+```bash
+# 构建静态文件
+npm run build
+
+# 导出到out目录
+# 将out目录部署到任何静态托管服务
+```
+
+## 3. Node.js 服务器部署
+
+### 构建应用
+```bash
+# 安装依赖
+npm install
+
+# 构建生产版本
+npm run build
+
+# 启动生产服务器
+npm start
+```
+
+### PM2 进程管理
+创建 `ecosystem.config.js`：
+```javascript
+module.exports = {
+  apps: [{
+    name: 'next-app',
+    script: 'npm',
+    args: 'start',
+    instances: 'max',
+    exec_mode: 'cluster',
+    env: {
+      NODE_ENV: 'production',
+      PORT: 3000
+    }
+  }]
+}
+```
+
+启动命令：
+```bash
+pm2 start ecosystem.config.js
+pm2 save
+pm2 startup
+```
+
+## 4. Docker 部署
+
+### Dockerfile
+```dockerfile
+FROM node:18-alpine AS base
+
+# 依赖阶段
+FROM base AS deps
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+
+# 构建阶段
+FROM base AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+RUN npm run build
+
+# 运行阶段
+FROM base AS runner
+WORKDIR /app
+ENV NODE_ENV production
+
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+COPY --from=builder /app/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+USER nextjs
+
+EXPOSE 3000
+ENV PORT 3000
+
+CMD ["node", "server.js"]
+```
+
+### next.config.js 配置
+```javascript
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'standalone',
+}
+
+module.exports = nextConfig
+```
+
+### 构建和运行
+```bash
+# 构建镜像
+docker build -t nextjs-app .
+
+# 运行容器
+docker run -p 3000:3000 nextjs-app
+```
+
+## 5. 其他云平台部署
+
+### Netlify
+```bash
+# 安装Netlify CLI
+npm install -g netlify-cli
+
+# 部署
+netlify deploy --prod --dir=out
+```
+
+### AWS Amplify
+在项目根目录创建 `amplify.yml`：
+```yaml
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm install
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: .next
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
+```
+
+### GitHub Pages
+创建 GitHub Actions 工作流 `.github/workflows/deploy.yml`：
+```yaml
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - name: Install and Build
+        run: |
+          npm install
+          npm run build
+          npm run export
+          
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+```
+
+## 6. 部署最佳实践
+
+### 环境配置
+```javascript
+// lib/env.js
+const env = {
+  isProduction: process.env.NODE_ENV === 'production',
+  apiUrl: process.env.NEXT_PUBLIC_API_URL,
+  databaseUrl: process.env.DATABASE_URL,
+}
+
+export default env
+```
+
+### 错误监控
+```bash
+# 安装Sentry
+npm install @sentry/nextjs
+```
+
+配置 `sentry.properties`：
+```ini
+defaults.url=https://sentry.io/
+defaults.org=your-org
+defaults.project=your-project
+auth.token=your-auth-token
+```
+
+### 性能优化
+```javascript
+// next.config.js
+const nextConfig = {
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  experimental: {
+    optimizeCss: true,
+  },
+}
+```
+
+## 7. CI/CD 流水线示例
+
+### GitHub Actions
+```yaml
+name: Deploy to Production
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Run tests
+        run: npm test
+        
+      - name: Build
+        run: npm run build
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build
+        run: npm run build
+        
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v20
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+```
+
+选择适合您项目需求的部署方式，Vercel通常是最简单且功能最完整的选项。
