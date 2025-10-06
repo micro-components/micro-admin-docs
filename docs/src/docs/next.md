@@ -1,0 +1,1 @@
+Next.js应用可以部署到多种平台，包括Vercel（Next.js的创建者维护的平台）、Netlify、AWS、Google Cloud等，也可以部署到自己的服务器。

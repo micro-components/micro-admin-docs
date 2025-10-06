@@ -177,6 +177,14 @@ function sidebarDocs(): DefaultTheme.SidebarItem[] {
         { text: "目录结构", link: "directory-structure" },
       ],
     },
+    {
+      text: "项目的部署",
+      items: [
+        { text: "介绍", link: "deploy" },
+        { text: "快速开始", link: "get-start" },
+        { text: "目录结构", link: "directory-structure" },
+      ],
+    },
   ];
 }
 function sidebarReference(): DefaultTheme.SidebarItem[] {
