@@ -64,9 +64,29 @@ function nav(): DefaultTheme.NavItem[] {
       activeMatch: " /dev/",
     },
     {
-      text: "开发文档",
-      link: "/docs/",
-      activeMatch: " /docs/",
+      text: "产品/文档",
+      items: [
+        {
+          text: "在线预览",
+          link: "https://micro-admin-site.netlify.app/",
+        },
+        {
+          text: "micro-design-admin",
+          link: "/docs/admin",
+        },
+        {
+          text: "micro-design-next",
+          link: "/docs/next",
+        },
+        {
+          text: "micro-design-uniapp",
+          link: "/docs/uniapp",
+        },
+        // {
+        //   text: "更新日志",
+        //   link: "https://github.com/chansee97/micro-admin/releases",
+        // },
+      ],
     },
     {
       text: "其他问题",
@@ -144,17 +164,17 @@ function sidebarDocs(): DefaultTheme.SidebarItem[] {
     {
       text: "介绍",
       items: [
-        { text: "开发文档", link: "introduction" },
-        { text: "开发文档", link: "get-start" },
-        { text: "开发文档", link: "directory-structure" },
+        { text: "第一章 入门", link: "Chapter1" },
+        { text: "第二章 开发", link: "Chapter2" },
+        { text: "目录结构", link: "directory-structure" },
       ],
     },
     {
-      text: "开发文档",
+      text: "数据库集成",
       items: [
-        { text: "开发文档", link: "introduction" },
-        { text: "开发文档", link: "get-start" },
-        { text: "开发文档", link: "directory-structure" },
+        { text: "介绍", link: "introduction" },
+        { text: "快速开始", link: "get-start" },
+        { text: "目录结构", link: "directory-structure" },
       ],
     },
   ];
@@ -189,7 +209,7 @@ function sidebarEnv(): DefaultTheme.SidebarItem[] {
       items: [
         { text: "Git", link: "git" },
         { text: "NodeJs", link: "nodejs" },
-        { text: "Mysql", link: "mysql" },
+        { text: "MySql", link: "mysql" },
       ],
     },
   ];
