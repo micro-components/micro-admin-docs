@@ -178,7 +178,7 @@ function sidebarDocs(): DefaultTheme.SidebarItem[] {
       ],
     },
     {
-      text: "项目的部署",
+      text: "项目部署",
       items: [
         { text: "介绍", link: "deploy" },
       ],
