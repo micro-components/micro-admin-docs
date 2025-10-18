@@ -2,19 +2,19 @@
 
 ## Project Introduction
 
-[micro-admin](https://github.com/chansee97/micro-admin) is a clean and concise back-end management template based on Vue3, Vite5, TypeScript, Naive UI. It implements complete functionality in a simple way, while considering code standards, readability, and understanding without excessive encapsulation, facilitating secondary development.
+[micro-admin](https://github.com/chansee97/micro-admin) is a clean and concise back-end management template based on Vue3, Vite5, TypeScript, Element-Plus. It implements complete functionality in a simple way, while considering code standards, readability, and understanding without excessive encapsulation, facilitating secondary development.
 
 - [Preview micro-Admin](https://micro-admin-site.netlify.app/)
 - [micro-Admin Documentation](https://micro-admin-docs.netlify.app/)
 
 ## Features
 
-- Developed based on the latest technology stack such as Vue3, Vite5, TypeScript, NaiveUI, Unocss
+- Developed based on the latest technology stack such as Vue3, Vite5, TypeScript, Element-Plus, Unocss
 - Based on [Alova](https://alova.js.org/) encapsulation and configuration, providing unified response handling and multi-scenario capabilities
 - Comprehensive front-end and back-end permission management solution
 - Support local static routes and dynamically generated routes returned by the backend, making routing simple and easy to configure
 - Secondary encapsulation of components frequently used in daily work to meet basic work requirements
-- Dark theme adaptation, maintaining the [Naive](https://github.com/tusen-ai/naive-ui) style of the interface
+- Dark theme adaptation, maintaining the [Element-Plus](https://github.com/tusen-ai/Element-Plus-ui) style of the interface
 - Only perform eslint validation during submission, without excessive restrictions, making development easier
 - Flexible and configurable interface style layout
 

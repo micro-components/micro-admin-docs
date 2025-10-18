@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "MicroAdmin"
   text: "A clean and concise middle template"
-  tagline: Vue3, Vite5, TypeScript, NaiveUI, Unocss
+  tagline: Vue3, Vite5, TypeScript, Element-Plus, Unocss
   image:
       src: /micro-admin.png
       alt: Micro-Admin
@@ -23,7 +23,7 @@ hero:
 features:
   - title: Latest Technology Stack
     icon: 💻
-    details: Developed based on the latest technology stack such as Vue3, Vite5, TypeScript, NaiveUI, Unocss
+    details: Developed based on the latest technology stack such as Vue3, Vite5, TypeScript, Element-Plus, Unocss
   - title: Network Requests
     icon: 📦
     details: Provide comprehensive network request encapsulation, unified response handling, and multi-scenario capabilities
@@ -35,7 +35,7 @@ features:
     details: Support local static routes and dynamically generated routes returned by the backend, making routing simple and easy to configure
   - title: Theme Adaptation
     icon: 🎨
-    details: Support dark theme adaptation, maintaining the Naive style of the interface
+    details: Support dark theme adaptation, maintaining the Element-Plus style of the interface
   - title: Code Standard
     icon: 📝
     details: Only perform eslint validation during submission, without excessive restrictions, making development easier

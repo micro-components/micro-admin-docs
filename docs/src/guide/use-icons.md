@@ -26,7 +26,7 @@
 
 ### 模板中网络图标（离线无效）
 
-项目中也提供了自动加载网络图标的功能，可以使用[icones](https://icones.js.org)中的所有图标，而不再局限于`icon-park-outline`系列，此功能是基于[@iconify/vue](https://iconify.design/docs/icon-components/vue/)和[n-icon](https://www.naiveui.com/zh-CN/light/components/icon)实现的。**该方式图标会被不会自动打包到项目中。离线无效**
+项目中也提供了自动加载网络图标的功能，可以使用[icones](https://icones.js.org)中的所有图标，而不再局限于`icon-park-outline`系列，此功能是基于[@iconify/vue](https://iconify.design/docs/icon-components/vue/)和[n-icon](https://www.Element-Plus.com/zh-CN/light/components/icon)实现的。**该方式图标会被不会自动打包到项目中。离线无效**
 
 例如，你找到一个图标`icon-park-outline:user`
 
@@ -60,7 +60,7 @@ interface iconPorps {
 
 ### ts中本地图标（离线有效）
 
-些场景可能无法直接使用组件的方式来使用图标，比如在ts文件或者vue文件的`script`中配合Naive组件添加一些图标渲染, 这时需要通过手动引入的方式来使用图标
+些场景可能无法直接使用组件的方式来使用图标，比如在ts文件或者vue文件的`script`中配合Element-Plus组件添加一些图标渲染, 这时需要通过手动引入的方式来使用图标
 
 ```ts
 import IconRedo from '~icons/icon-park-outline/redo'

@@ -26,7 +26,7 @@
 
 ## 组件库样式
 
-修改`src\store\app\theme.json`,添加你需要的样式变量，具体可参考[Naive-UI](https://www.naiveui.com/zh-CN/light/docs/customize-theme)
+修改`src\store\app\theme.json`,添加你需要的样式变量，具体可参考[Element-Plus-UI](https://www.Element-Plus.com/zh-CN/light/docs/customize-theme)
 
 ```json
 {

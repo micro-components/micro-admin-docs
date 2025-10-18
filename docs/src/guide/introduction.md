@@ -2,7 +2,7 @@
 
 ## 项目简介
 
-[Micro-Admin](https://github.com/micro-components/micro-admin)是一个基于Vue3、Vite5、Typescript、Naive UI, 简洁干净后台管理模板，用简单的方式实现完整功能，并尽可能的考虑代码规范，易读易理解无过度封装，方便二次开发。](https://github.com/micro-components/micro-design-admin)是一个基于Vue3、Vite5、Typescript、Element Plus, 简洁干净后台管理模板，用简单的方式实现完整功能，并尽可能的考虑代码规范，易读易理解无过度封装，方便二次开发。
+[Micro-Admin](https://github.com/micro-components/micro-admin)是一个基于Vue3、Vite5、Typescript、Element-Plus, 简洁干净后台管理模板，用简单的方式实现完整功能，并尽可能的考虑代码规范，易读易理解无过度封装，方便二次开发。](https://github.com/micro-components/micro-design-admin)是一个基于Vue3、Vite5、Typescript、Element Plus, 简洁干净后台管理模板，用简单的方式实现完整功能，并尽可能的考虑代码规范，易读易理解无过度封装，方便二次开发。
 
 - [Micro-Admin 预览](https://micro-admin-site.netlify.app/)
 - [Micro-Admin 文档](https://micro-admin-docs.netlify.app/)
@@ -10,12 +10,12 @@
 
 ## 特性
 
-- 基于Vue3、Vite5、TypeScript、NaiveUI、Unocss等最新技术栈开发
+- 基于Vue3、Vite5、TypeScript、Element-Plus、Unocss等最新技术栈开发
 - 基于[Alova](https://alova.js.org/)封装和配置，提供统一的响应处理和多场景能力
 - 完善的前后端权限管理方案
 - 支持本地静态路由和后台返回动态路由，路由简单易配置
 - 对日常使用频率较高的组件二次封装,满足基础工作需求
-- 黑暗主题适配, 界面样式保持[Naive](https://github.com/tusen-ai/naive-ui)风格
+- 黑暗主题适配, 界面样式保持[Element-Plus](https://github.com/tusen-ai/Element-Plus-ui)风格
 - 仅在提交时进行eslint校验，没有过多限制，开发更简便
 - 界面样式布局灵活可配置
 

@@ -26,7 +26,7 @@ It is recommended to use the [Iconify IntelliSense](https://marketplace.visualst
 
 ### Network Icons in Templates (Not Available Offline)
 
-The project also provides the functionality to automatically load network icons, allowing the use of all icons from [icones](https://icones.js.org) rather than being limited to the `icon-park-outline` series. This feature is implemented based on [@iconify/vue](https://iconify.design/docs/icon-components/vue/) and [n-icon](https://www.naiveui.com/en-US/docs/icon). **Icons loaded this way will not be automatically packaged into the project. Not available offline.**
+The project also provides the functionality to automatically load network icons, allowing the use of all icons from [icones](https://icones.js.org) rather than being limited to the `icon-park-outline` series. This feature is implemented based on [@iconify/vue](https://iconify.design/docs/icon-components/vue/) and [n-icon](https://www.Element-Plus.com/en-US/docs/icon). **Icons loaded this way will not be automatically packaged into the project. Not available offline.**
 
 For example, if you find an icon named `icon-park-outline:user`
 
@@ -60,7 +60,7 @@ interface iconProps {
 
 ### Local Icons in TypeScript (Available Offline)
 
-In some scenarios, it may not be possible to directly use icons in a component, such as when adding icons for rendering in a TypeScript file or in the `script` section of a Vue file with Naive components. In such cases, icons need to be manually imported for use.
+In some scenarios, it may not be possible to directly use icons in a component, such as when adding icons for rendering in a TypeScript file or in the `script` section of a Vue file with Element-Plus components. In such cases, icons need to be manually imported for use.
 
 ```ts
 import IconRedo from '~icons/icon-park-outline/redo'

@@ -26,7 +26,7 @@ Modify `src\store\app\index.ts` to customize the following variables:
 
 ## Component Library Style
 
-Modify `src\store\app\theme.json` to add the style variables you need. For specific details, please refer to [Naive-UI](https://www.naiveui.com/en-US/docs/customize-theme).
+Modify `src\store\app\theme.json` to add the style variables you need. For specific details, please refer to [Element-Plus-UI](https://www.Element-Plus.com/en-US/docs/customize-theme).
 
 ```json
 {
