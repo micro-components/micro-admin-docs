@@ -2,11 +2,14 @@
 
 ## 环境准备
 
-micro-admin是基于最新Vite版本开发，所以需要[Node.js](https://nodejs.org/en/) 20.x 版本来支持。
+Micro-Admin是基于最新Vite版本开发，所以需要[Node.js](https://nodejs.org/en/) 20.x 版本来支持。
 包管理器推荐使用 [pnpm](https://pnpm.io/) 8.x 版本
 
 - [环境准备详细教程](/dev/nodejs)
-
+## 开发环境推荐
+为了获得最佳的开发体验，我们推荐使用以下工具：
+- 代码编辑器：[Cursor](https://cursor.com/cn) - AI 驱动的智能编辑器，提供强大的代码提示和生成功能
+- 运行调试工具：[HBuilderX](https://www.dcloud.io/hbuilderx.html) - 专为 uni-app 优化的集成开发环境
 ## 获取代码
 
 ### 下载产物
