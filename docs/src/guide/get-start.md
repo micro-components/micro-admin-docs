@@ -8,8 +8,25 @@ Micro-Admin是基于最新Vite版本开发，所以需要[Node.js](https://nodej
 - [环境准备详细教程](/dev/nodejs)
 ## 开发环境推荐
 为了获得最佳的开发体验，我们推荐使用以下工具：
+- 代码编辑器：[VS Code](https://code.visualstudio.com/) - 最流行的代码编辑器之一，支持多种插件和扩展
 - 代码编辑器：[Cursor](https://cursor.com/cn) - AI 驱动的智能编辑器，提供强大的代码提示和生成功能
+- [Codeium](https://codeium.com/) - 免费的AI代码补全工具，支持多种语言和IDE插件
+- [Tabnine](https://www.tabnine.com/) - 企业级AI代码助手，提供本地化模型部署选项
+- [Sourcegraph Cody](https://about.sourcegraph.com/cody) - 基于代码库理解的智能编程助手
+- [GitHub Copilot](https://github.com/features/copilot) - GitHub官方AI编程伙伴，深度集成VS Code等编辑器
+- [Amazon CodeWhisperer](https://aws.amazon.com/codewhisperer/) - AWS提供的AI编程助手，支持多种编程语言
+- [Replit Ghostwriter](https://replit.com/site/ghostwriter) - 在线IDE Replit内置的AI编程功能
+- [Phind](https://www.phind.com/) - 面向开发者的AI搜索引擎和代码生成工具
+- [Code Llama](https://ai.meta.com/llama/code-llama/) - Meta开源的代码生成AI模型
+- [DeepSeek Coder](https://deepseek.com/) - 深度求索推出的智能编程助手
+- [Bito AI](https://bito.ai/) - 基于GPT的代码生成和解释工具
+- [CodeGeeX](https://codegeex.cn/) - 清华大学团队开发的AI编程助手
 - 运行调试工具：[HBuilderX](https://www.dcloud.io/hbuilderx.html) - 专为 uni-app 优化的集成开发环境
+- 数据库工具：[DBeaver](https://dbeaver.io/) - 免费开源的通用数据库管理工具，支持多种数据库类型
+- API测试工具：[Postman](https://www.postman.com/) - 功能强大的API开发与测试平台
+- 版本控制工具：[GitHub Desktop](https://desktop.github.com/) - 简单易用的Git图形化客户端
+- 终端工具：[Windows Terminal](https://aka.ms/terminal) - 现代化的命令行终端，支持多标签和自定义配置
+- 容器工具：[Docker Desktop](https://www.docker.com/products/docker-desktop/) - 本地容器化开发和部署解决方案
 ## 获取代码
 
 ### 下载产物
