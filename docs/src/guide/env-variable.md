@@ -67,10 +67,10 @@ export default defineConfig(({ mode }) => {
   // loadEnv 会从 .env 文件加载变量，并合并 process.env
   // 参数：当前模式，当前工作目录，环境变量前缀
   const env = loadEnv(mode, process.cwd(), 'VITE_')
-  
+
   // 现在你可以通过 env 对象访问环境变量
   console.log(env.VITE_APP_TITLE)
-  
+
   return {
     // 你的 Vite 配置...
     define: {

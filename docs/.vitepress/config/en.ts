@@ -53,6 +53,11 @@ function nav(): DefaultTheme.NavItem[] {
       activeMatch: "/donate/",
     },
     {
+      text: "AI IDE",
+      link: "/en/dev/ai",
+      activeMatch: " /ai/",
+    },
+    {
       text: "About",
       items: [
         {

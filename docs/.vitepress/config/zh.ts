@@ -99,6 +99,11 @@ function nav(): DefaultTheme.NavItem[] {
       activeMatch: " /donate/",
     },
     {
+      text: "AI编程",
+      link: "/dev/ai",
+      activeMatch: " /ai/",
+    },
+    {
       text: "关于",
       items: [
         {
