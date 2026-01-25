@@ -1,13 +1,34 @@
 /**
- * Colors: Solid
+ * MicroAdmin - Cyber Neon Theme
+ * 赛博朋克霓虹科技主题
+ * -------------------------------------------------------------------------- */
+
+/* Google Fonts - 科技感字体 */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/**
+ * Colors: Core Palette
  * -------------------------------------------------------------------------- */
 
 :root {
+  /* 基础色 */
   --vp-c-white: #ffffff;
   --vp-c-black: #000000;
-
   --vp-c-neutral: var(--vp-c-black);
   --vp-c-neutral-inverse: var(--vp-c-white);
+
+  /* 霓虹色系 */
+  --neon-cyan: #00f5ff;
+  --neon-purple: #bf00ff;
+  --neon-pink: #ff00aa;
+  --neon-blue: #0066ff;
+  --neon-green: #00ff88;
+  --neon-orange: #ff6b00;
+
+  /* 渐变 */
+  --gradient-neon: linear-gradient(135deg, var(--neon-cyan) 0%, var(--neon-purple) 50%, var(--neon-pink) 100%);
+  --gradient-glow: linear-gradient(135deg, rgba(0,245,255,0.15) 0%, rgba(191,0,255,0.15) 100%);
+  --gradient-card: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
 }
 
 .dark {
@@ -17,193 +38,126 @@
 
 /**
  * Colors: Palette
- *
- * The primitive colors used for accent colors. These colors are referenced
- * by functional colors such as "Text", "Background", or "Brand".
- *
- * Each colors have exact same color scale system with 3 levels of solid
- * colors with different brightness, and 1 soft color.
- *
- * - `XXX-1`: The most solid color used mainly for colored text. It must
- *   satisfy the contrast ratio against when used on top of `XXX-soft`.
- *
- * - `XXX-2`: The color used mainly for hover state of the button.
- *
- * - `XXX-3`: The color for solid background, such as bg color of the button.
- *    It must satisfy the contrast ratio with pure white (#ffffff) text on
- *    top of it.
- *
- * - `XXX-soft`: The color used for subtle background such as custom container
- *    or badges. It must satisfy the contrast ratio when putting `XXX-1` colors
- *    on top of it.
- *
- *    The soft color must be semi transparent alpha channel. This is crucial
- *    because it allows adding multiple "soft" colors on top of each other
- *    to create a accent, such as when having inline code block inside
- *    custom containers.
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-c-gray-1: #dddde3;
-  --vp-c-gray-2: #e4e4e9;
-  --vp-c-gray-3: #ebebef;
-  --vp-c-gray-soft: rgba(142, 150, 170, 0.14);
+  --vp-c-gray-1: #e4e6eb;
+  --vp-c-gray-2: #c8ccd4;
+  --vp-c-gray-3: #a8adb8;
+  --vp-c-gray-soft: rgba(142, 150, 170, 0.12);
 
-  --vp-c-indigo-1: #3451b2;
-  --vp-c-indigo-2: #3a5ccc;
-  --vp-c-indigo-3: #5672cd;
-  --vp-c-indigo-soft: rgba(100, 108, 255, 0.14);
+  --vp-c-indigo-1: #00f5ff;
+  --vp-c-indigo-2: #00d4dd;
+  --vp-c-indigo-3: #00b3bb;
+  --vp-c-indigo-soft: rgba(0, 245, 255, 0.12);
 
-  --vp-c-purple-1: #6f42c1;
-  --vp-c-purple-2: #7e4cc9;
-  --vp-c-purple-3: #8e5cd9;
-  --vp-c-purple-soft: rgba(159, 122, 234, 0.14);
+  --vp-c-purple-1: #bf00ff;
+  --vp-c-purple-2: #a000dd;
+  --vp-c-purple-3: #8800bb;
+  --vp-c-purple-soft: rgba(191, 0, 255, 0.12);
 
-  --vp-c-green-1: #18794e;
-  --vp-c-green-2: #299764;
-  --vp-c-green-3: #30a46c;
-  --vp-c-green-soft: rgba(16, 185, 129, 0.14);
+  --vp-c-green-1: #00ff88;
+  --vp-c-green-2: #00dd77;
+  --vp-c-green-3: #00bb66;
+  --vp-c-green-soft: rgba(0, 255, 136, 0.12);
 
-  --vp-c-yellow-1: #f76208;
-  --vp-c-yellow-2: #f98139;
-  --vp-c-yellow-3: #faa16b;
-  --vp-c-yellow-soft: rgba(234, 179, 8, 0.14);
+  --vp-c-yellow-1: #ffaa00;
+  --vp-c-yellow-2: #ff9500;
+  --vp-c-yellow-3: #ff8000;
+  --vp-c-yellow-soft: rgba(255, 170, 0, 0.12);
 
-  --vp-c-red-1: #b8272c;
-  --vp-c-red-2: #d5393e;
-  --vp-c-red-3: #e0575b;
-  --vp-c-red-soft: rgba(244, 63, 94, 0.14);
+  --vp-c-red-1: #ff0055;
+  --vp-c-red-2: #dd0048;
+  --vp-c-red-3: #bb003c;
+  --vp-c-red-soft: rgba(255, 0, 85, 0.12);
 
-  --vp-c-sponsor: #db2777;
+  --vp-c-sponsor: #ff00aa;
 }
 
 .dark {
-  --vp-c-gray-1: #515c67;
-  --vp-c-gray-2: #414853;
-  --vp-c-gray-3: #32363f;
+  --vp-c-gray-1: #3a3f4b;
+  --vp-c-gray-2: #2d323c;
+  --vp-c-gray-3: #22262e;
   --vp-c-gray-soft: rgba(101, 117, 133, 0.16);
 
-  --vp-c-indigo-1: #a8b1ff;
-  --vp-c-indigo-2: #5c73e7;
-  --vp-c-indigo-3: #3e63dd;
-  --vp-c-indigo-soft: rgba(100, 108, 255, 0.16);
+  --vp-c-indigo-1: #00f5ff;
+  --vp-c-indigo-2: #00d4dd;
+  --vp-c-indigo-3: #00b3bb;
+  --vp-c-indigo-soft: rgba(0, 245, 255, 0.16);
 
-  --vp-c-purple-1: #c8abfa;
-  --vp-c-purple-2: #a879e6;
-  --vp-c-purple-3: #8e5cd9;
-  --vp-c-purple-soft: rgba(159, 122, 234, 0.16);
+  --vp-c-purple-1: #d966ff;
+  --vp-c-purple-2: #bf00ff;
+  --vp-c-purple-3: #a000dd;
+  --vp-c-purple-soft: rgba(191, 0, 255, 0.16);
 
-  --vp-c-green-1: #3dd68c;
-  --vp-c-green-2: #30a46c;
-  --vp-c-green-3: #298459;
-  --vp-c-green-soft: rgba(16, 185, 129, 0.16);
+  --vp-c-green-1: #00ff88;
+  --vp-c-green-2: #00dd77;
+  --vp-c-green-3: #00bb66;
+  --vp-c-green-soft: rgba(0, 255, 136, 0.16);
 
-  --vp-c-yellow-1: #f9b44e;
-  --vp-c-yellow-2: #da8b17;
-  --vp-c-yellow-3: #a46a0a;
-  --vp-c-yellow-soft: rgba(234, 179, 8, 0.16);
+  --vp-c-yellow-1: #ffcc00;
+  --vp-c-yellow-2: #ffaa00;
+  --vp-c-yellow-3: #ff9500;
+  --vp-c-yellow-soft: rgba(255, 170, 0, 0.16);
 
-  --vp-c-red-1: #f66f81;
-  --vp-c-red-2: #f14158;
-  --vp-c-red-3: #b62a3c;
-  --vp-c-red-soft: rgba(244, 63, 94, 0.16);
+  --vp-c-red-1: #ff4477;
+  --vp-c-red-2: #ff0055;
+  --vp-c-red-3: #dd0048;
+  --vp-c-red-soft: rgba(255, 0, 85, 0.16);
 }
 
 /**
  * Colors: Background
- *
- * - `bg`: The bg color used for main screen.
- *
- * - `bg-alt`: The alternative bg color used in places such as "sidebar",
- *   or "code block".
- *
- * - `bg-elv`: The elevated bg color. This is used at parts where it "floats",
- *   such as "dialog".
- *
- * - `bg-soft`: The bg color to slightly distinguish some components from
- *   the page. Used for things like "carbon ads" or "table".
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-c-bg: #ffffff;
-  --vp-c-bg-alt: #f6f6f7;
+  --vp-c-bg: #f8fafc;
+  --vp-c-bg-alt: #f1f5f9;
   --vp-c-bg-elv: #ffffff;
-  --vp-c-bg-soft: #f6f6f7;
+  --vp-c-bg-soft: #f1f5f9;
 }
 
 .dark {
-  --vp-c-bg: #1b1b1f;
-  --vp-c-bg-alt: #161618;
-  --vp-c-bg-elv: #202127;
-  --vp-c-bg-soft: #202127;
+  --vp-c-bg: #0a0a0f;
+  --vp-c-bg-alt: #0f0f18;
+  --vp-c-bg-elv: #14141f;
+  --vp-c-bg-soft: #14141f;
 }
 
 /**
  * Colors: Borders
- *
- * - `divider`: This is used for separators. This is used to divide sections
- *   within the same components, such as having separator on "h2" heading.
- *
- * - `border`: This is designed for borders on interactive components.
- *   For example this should be used for a button outline.
- *
- * - `gutter`: This is used to divide components in the page. For example
- *   the header and the lest of the page.
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-c-border: #c2c2c4;
-  --vp-c-divider: #e2e2e3;
-  --vp-c-gutter: #e2e2e3;
+  --vp-c-border: #e2e8f0;
+  --vp-c-divider: #e2e8f0;
+  --vp-c-gutter: #e2e8f0;
 }
 
 .dark {
-  --vp-c-border: #3c3f44;
-  --vp-c-divider: #2e2e32;
-  --vp-c-gutter: #000000;
+  --vp-c-border: rgba(0, 245, 255, 0.15);
+  --vp-c-divider: rgba(0, 245, 255, 0.1);
+  --vp-c-gutter: rgba(0, 245, 255, 0.08);
 }
 
 /**
  * Colors: Text
- *
- * - `text-1`: Used for primary text.
- *
- * - `text-2`: Used for muted texts, such as "inactive menu" or "info texts".
- *
- * - `text-3`: Used for subtle texts, such as "placeholders" or "caret icon".
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-c-text-1: rgba(63, 85, 96);
-  --vp-c-text-2: rgba(63, 85, 96, 0.78);
-  --vp-c-text-3: rgba(63, 85, 96, 0.56);
+  --vp-c-text-1: #1e293b;
+  --vp-c-text-2: #475569;
+  --vp-c-text-3: #94a3b8;
 }
 
 .dark {
-  --vp-c-text-1: rgba(255, 255, 245, 0.86);
-  --vp-c-text-2: rgba(235, 235, 245, 0.6);
-  --vp-c-text-3: rgba(235, 235, 245, 0.38);
+  --vp-c-text-1: rgba(255, 255, 255, 0.92);
+  --vp-c-text-2: rgba(255, 255, 255, 0.65);
+  --vp-c-text-3: rgba(255, 255, 255, 0.4);
 }
 
 /**
  * Colors: Function
- *
- * - `default`: The color used purely for subtle indication without any
- *   special meanings attached to it such as bg color for menu hover state.
- *
- * - `brand`: Used for primary brand colors, such as link text, button with
- *   brand theme, etc.
- *
- * - `tip`: Used to indicate useful information. The default theme uses the
- *   brand color for this by default.
- *
- * - `warning`: Used to indicate warning to the users. Used in custom
- *   container, badges, etc.
- *
- * - `danger`: Used to show error, or dangerous message to the users. Used
- *   in custom container, badges, etc.
- *
- * To understand the scaling system, refer to "Colors: Palette" section.
  * -------------------------------------------------------------------------- */
 
 :root {
@@ -212,12 +166,10 @@
   --vp-c-default-3: var(--vp-c-gray-3);
   --vp-c-default-soft: var(--vp-c-gray-soft);
 
-  --vp-c-brand-1: var(--vp-c-yellow-1);
-  --vp-c-brand-2: var(--vp-c-yellow-2);
-  --vp-c-brand-3: var(--vp-c-yellow-3);
-  --vp-c-brand-soft: var(--vp-c-yellow-soft);
-
-  /* DEPRECATED: Use `--vp-c-brand-1` instead. */
+  --vp-c-brand-1: var(--neon-cyan);
+  --vp-c-brand-2: #00d4dd;
+  --vp-c-brand-3: #00b3bb;
+  --vp-c-brand-soft: rgba(0, 245, 255, 0.12);
   --vp-c-brand: var(--vp-c-brand-1);
 
   --vp-c-tip-1: var(--vp-c-brand-1);
@@ -257,20 +209,16 @@
 }
 
 /**
- * Typography
+ * Typography - 科技感字体
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-font-family-base: 'Chinese Quotes', 'Inter var', 'Inter', ui-sans-serif,
-    system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Helvetica, Arial, 'Noto Sans', sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  --vp-font-family-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco,
-    Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --vp-font-family-base: 'Rajdhani', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --vp-font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
 /**
- * Shadows
+ * Shadows - 霓虹发光效果
  * -------------------------------------------------------------------------- */
 
 :root {
@@ -279,6 +227,15 @@
   --vp-shadow-3: 0 12px 32px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.08);
   --vp-shadow-4: 0 14px 44px rgba(0, 0, 0, 0.12), 0 3px 9px rgba(0, 0, 0, 0.12);
   --vp-shadow-5: 0 18px 56px rgba(0, 0, 0, 0.16), 0 4px 12px rgba(0, 0, 0, 0.16);
+
+  --shadow-neon: 0 0 20px rgba(0, 245, 255, 0.3), 0 0 40px rgba(191, 0, 255, 0.2);
+  --shadow-neon-strong: 0 0 30px rgba(0, 245, 255, 0.5), 0 0 60px rgba(191, 0, 255, 0.3);
+}
+
+.dark {
+  --vp-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 245, 255, 0.05);
+  --vp-shadow-2: 0 3px 12px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 245, 255, 0.08);
+  --vp-shadow-3: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 245, 255, 0.1);
 }
 
 /**
@@ -306,41 +263,32 @@
 
 :root {
   --vp-layout-max-width: 1440px;
+  --vp-header-anchor-symbol: '◆';
 }
 
 /**
- * Component: Header Anchor
- * -------------------------------------------------------------------------- */
-
-:root {
-  --vp-header-anchor-symbol: '#';
-}
-
-/**
- * Component: Code
+ * Component: Code - 代码块科技风格
  * -------------------------------------------------------------------------- */
 
 :root {
   --vp-code-line-height: 1.7;
   --vp-code-font-size: 0.875em;
-  --vp-code-color: var(--vp-c-brand-1);
-  --vp-code-link-color: var(--vp-c-brand-1);
-  --vp-code-link-hover-color: var(--vp-c-brand-2);
-  --vp-code-bg: var(--vp-c-default-soft);
+  --vp-code-color: var(--neon-cyan);
+  --vp-code-link-color: var(--neon-cyan);
+  --vp-code-link-hover-color: var(--neon-purple);
+  --vp-code-bg: rgba(0, 245, 255, 0.06);
 
   --vp-code-block-color: var(--vp-c-text-2);
   --vp-code-block-bg: var(--vp-c-bg-alt);
   --vp-code-block-divider-color: var(--vp-c-gutter);
 
-  --vp-code-lang-color: var(--vp-c-text-3);
-
-  --vp-code-line-highlight-color: var(--vp-c-default-soft);
+  --vp-code-lang-color: var(--neon-purple);
+  --vp-code-line-highlight-color: rgba(0, 245, 255, 0.08);
   --vp-code-line-number-color: var(--vp-c-text-3);
 
-  --vp-code-line-diff-add-color: var(--vp-c-success-soft);
+  --vp-code-line-diff-add-color: rgba(0, 255, 136, 0.12);
   --vp-code-line-diff-add-symbol-color: var(--vp-c-success-1);
-
-  --vp-code-line-diff-remove-color: var(--vp-c-danger-soft);
+  --vp-code-line-diff-remove-color: rgba(255, 0, 85, 0.12);
   --vp-code-line-diff-remove-symbol-color: var(--vp-c-danger-1);
 
   --vp-code-line-warning-color: var(--vp-c-warning-soft);
@@ -348,53 +296,53 @@
 
   --vp-code-copy-code-border-color: var(--vp-c-divider);
   --vp-code-copy-code-bg: var(--vp-c-bg-soft);
-  --vp-code-copy-code-hover-border-color: var(--vp-c-divider);
-  --vp-code-copy-code-hover-bg: var(--vp-c-bg);
-  --vp-code-copy-code-active-text: var(--vp-c-text-2);
+  --vp-code-copy-code-hover-border-color: var(--neon-cyan);
+  --vp-code-copy-code-hover-bg: rgba(0, 245, 255, 0.1);
+  --vp-code-copy-code-active-text: var(--neon-cyan);
   --vp-code-copy-copied-text-content: 'Copied';
 
   --vp-code-tab-divider: var(--vp-code-block-divider-color);
   --vp-code-tab-text-color: var(--vp-c-text-2);
   --vp-code-tab-bg: var(--vp-code-block-bg);
-  --vp-code-tab-hover-text-color: var(--vp-c-text-1);
-  --vp-code-tab-active-text-color: var(--vp-c-text-1);
-  --vp-code-tab-active-bar-color: var(--vp-c-brand-1);
+  --vp-code-tab-hover-text-color: var(--neon-cyan);
+  --vp-code-tab-active-text-color: var(--neon-cyan);
+  --vp-code-tab-active-bar-color: var(--neon-cyan);
 }
 
 /**
- * Component: Button
+ * Component: Button - 霓虹按钮
  * -------------------------------------------------------------------------- */
 
 :root {
   --vp-button-brand-border: transparent;
-  --vp-button-brand-text: var(--vp-c-white);
-  --vp-button-brand-bg: var(--vp-c-brand-3);
+  --vp-button-brand-text: var(--vp-c-black);
+  --vp-button-brand-bg: var(--neon-cyan);
   --vp-button-brand-hover-border: transparent;
-  --vp-button-brand-hover-text: var(--vp-c-white);
-  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+  --vp-button-brand-hover-text: var(--vp-c-black);
+  --vp-button-brand-hover-bg: var(--neon-purple);
   --vp-button-brand-active-border: transparent;
   --vp-button-brand-active-text: var(--vp-c-white);
-  --vp-button-brand-active-bg: var(--vp-c-brand-1);
+  --vp-button-brand-active-bg: var(--neon-pink);
 
-  --vp-button-alt-border: transparent;
+  --vp-button-alt-border: rgba(0, 245, 255, 0.3);
   --vp-button-alt-text: var(--vp-c-text-1);
-  --vp-button-alt-bg: var(--vp-c-default-3);
-  --vp-button-alt-hover-border: transparent;
-  --vp-button-alt-hover-text: var(--vp-c-text-1);
-  --vp-button-alt-hover-bg: var(--vp-c-default-2);
-  --vp-button-alt-active-border: transparent;
-  --vp-button-alt-active-text: var(--vp-c-text-1);
-  --vp-button-alt-active-bg: var(--vp-c-default-1);
+  --vp-button-alt-bg: transparent;
+  --vp-button-alt-hover-border: var(--neon-cyan);
+  --vp-button-alt-hover-text: var(--neon-cyan);
+  --vp-button-alt-hover-bg: rgba(0, 245, 255, 0.1);
+  --vp-button-alt-active-border: var(--neon-purple);
+  --vp-button-alt-active-text: var(--neon-purple);
+  --vp-button-alt-active-bg: rgba(191, 0, 255, 0.1);
 
-  --vp-button-sponsor-border: var(--vp-c-text-2);
-  --vp-button-sponsor-text: var(--vp-c-text-2);
+  --vp-button-sponsor-border: var(--neon-pink);
+  --vp-button-sponsor-text: var(--neon-pink);
   --vp-button-sponsor-bg: transparent;
-  --vp-button-sponsor-hover-border: var(--vp-c-sponsor);
-  --vp-button-sponsor-hover-text: var(--vp-c-sponsor);
-  --vp-button-sponsor-hover-bg: transparent;
-  --vp-button-sponsor-active-border: var(--vp-c-sponsor);
-  --vp-button-sponsor-active-text: var(--vp-c-sponsor);
-  --vp-button-sponsor-active-bg: transparent;
+  --vp-button-sponsor-hover-border: var(--neon-pink);
+  --vp-button-sponsor-hover-text: var(--vp-c-white);
+  --vp-button-sponsor-hover-bg: var(--neon-pink);
+  --vp-button-sponsor-active-border: var(--neon-pink);
+  --vp-button-sponsor-active-text: var(--vp-c-white);
+  --vp-button-sponsor-active-bg: var(--neon-pink);
 }
 
 /**
@@ -405,40 +353,40 @@
   --vp-custom-block-font-size: 14px;
   --vp-custom-block-code-font-size: 13px;
 
-  --vp-custom-block-info-border: transparent;
+  --vp-custom-block-info-border: rgba(0, 245, 255, 0.3);
   --vp-custom-block-info-text: var(--vp-c-text-1);
-  --vp-custom-block-info-bg: var(--vp-c-default-soft);
-  --vp-custom-block-info-code-bg: var(--vp-c-default-soft);
+  --vp-custom-block-info-bg: rgba(0, 245, 255, 0.05);
+  --vp-custom-block-info-code-bg: rgba(0, 245, 255, 0.08);
 
-  --vp-custom-block-note-border: transparent;
+  --vp-custom-block-note-border: rgba(0, 245, 255, 0.3);
   --vp-custom-block-note-text: var(--vp-c-text-1);
-  --vp-custom-block-note-bg: var(--vp-c-default-soft);
-  --vp-custom-block-note-code-bg: var(--vp-c-default-soft);
+  --vp-custom-block-note-bg: rgba(0, 245, 255, 0.05);
+  --vp-custom-block-note-code-bg: rgba(0, 245, 255, 0.08);
 
-  --vp-custom-block-tip-border: transparent;
+  --vp-custom-block-tip-border: rgba(0, 245, 255, 0.5);
   --vp-custom-block-tip-text: var(--vp-c-text-1);
-  --vp-custom-block-tip-bg: var(--vp-c-tip-soft);
-  --vp-custom-block-tip-code-bg: var(--vp-c-tip-soft);
+  --vp-custom-block-tip-bg: rgba(0, 245, 255, 0.08);
+  --vp-custom-block-tip-code-bg: rgba(0, 245, 255, 0.1);
 
-  --vp-custom-block-important-border: transparent;
+  --vp-custom-block-important-border: rgba(191, 0, 255, 0.5);
   --vp-custom-block-important-text: var(--vp-c-text-1);
-  --vp-custom-block-important-bg: var(--vp-c-important-soft);
-  --vp-custom-block-important-code-bg: var(--vp-c-important-soft);
+  --vp-custom-block-important-bg: rgba(191, 0, 255, 0.08);
+  --vp-custom-block-important-code-bg: rgba(191, 0, 255, 0.1);
 
-  --vp-custom-block-warning-border: transparent;
+  --vp-custom-block-warning-border: rgba(255, 170, 0, 0.5);
   --vp-custom-block-warning-text: var(--vp-c-text-1);
-  --vp-custom-block-warning-bg: var(--vp-c-warning-soft);
-  --vp-custom-block-warning-code-bg: var(--vp-c-warning-soft);
+  --vp-custom-block-warning-bg: rgba(255, 170, 0, 0.08);
+  --vp-custom-block-warning-code-bg: rgba(255, 170, 0, 0.1);
 
-  --vp-custom-block-danger-border: transparent;
+  --vp-custom-block-danger-border: rgba(255, 0, 85, 0.5);
   --vp-custom-block-danger-text: var(--vp-c-text-1);
-  --vp-custom-block-danger-bg: var(--vp-c-danger-soft);
-  --vp-custom-block-danger-code-bg: var(--vp-c-danger-soft);
+  --vp-custom-block-danger-bg: rgba(255, 0, 85, 0.08);
+  --vp-custom-block-danger-code-bg: rgba(255, 0, 85, 0.1);
 
-  --vp-custom-block-caution-border: transparent;
+  --vp-custom-block-caution-border: rgba(255, 0, 85, 0.5);
   --vp-custom-block-caution-text: var(--vp-c-text-1);
-  --vp-custom-block-caution-bg: var(--vp-c-caution-soft);
-  --vp-custom-block-caution-code-bg: var(--vp-c-caution-soft);
+  --vp-custom-block-caution-bg: rgba(255, 0, 85, 0.08);
+  --vp-custom-block-caution-code-bg: rgba(255, 0, 85, 0.1);
 
   --vp-custom-block-details-border: var(--vp-custom-block-info-border);
   --vp-custom-block-details-text: var(--vp-custom-block-info-text);
@@ -451,14 +399,13 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-input-border-color: var(--vp-c-border);
+  --vp-input-border-color: rgba(0, 245, 255, 0.2);
   --vp-input-bg-color: var(--vp-c-bg-alt);
-
   --vp-input-switch-bg-color: var(--vp-c-default-soft);
 }
 
 /**
- * Component: Nav
+ * Component: Nav - 导航栏
  * -------------------------------------------------------------------------- */
 
 :root {
@@ -498,19 +445,23 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-backdrop-bg-color: rgba(0, 0, 0, 0.6);
+  --vp-backdrop-bg-color: rgba(0, 0, 0, 0.7);
+}
+
+.dark {
+  --vp-backdrop-bg-color: rgba(0, 0, 0, 0.85);
 }
 
 /**
- * Component: Home
+ * Component: Home - 首页英雄区
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-home-hero-name-color: var(--vp-c-brand-1);
-  --vp-home-hero-name-background: transparent;
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: var(--gradient-neon);
 
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, rgb(230, 179, 148) 1%,rgb(230, 179, 148)  1%);;
-  --vp-home-hero-image-filter: blur(44px);
+  --vp-home-hero-image-background-image: linear-gradient(135deg, rgba(0,245,255,0.3) 0%, rgba(191,0,255,0.3) 50%, rgba(255,0,170,0.3) 100%);
+  --vp-home-hero-image-filter: blur(68px);
 }
 
 /**
@@ -523,8 +474,8 @@
   --vp-badge-info-bg: var(--vp-c-default-soft);
 
   --vp-badge-tip-border: transparent;
-  --vp-badge-tip-text: var(--vp-c-tip-1);
-  --vp-badge-tip-bg: var(--vp-c-tip-soft);
+  --vp-badge-tip-text: var(--neon-cyan);
+  --vp-badge-tip-bg: rgba(0, 245, 255, 0.12);
 
   --vp-badge-warning-border: transparent;
   --vp-badge-warning-text: var(--vp-c-warning-1);
@@ -543,20 +494,757 @@
   --vp-carbon-ads-text-color: var(--vp-c-text-1);
   --vp-carbon-ads-poweredby-color: var(--vp-c-text-2);
   --vp-carbon-ads-bg-color: var(--vp-c-bg-soft);
-  --vp-carbon-ads-hover-text-color: var(--vp-c-brand-1);
+  --vp-carbon-ads-hover-text-color: var(--neon-cyan);
   --vp-carbon-ads-hover-poweredby-color: var(--vp-c-text-1);
 }
 
 /**
-  * Component: Local Search
-  * -------------------------------------------------------------------------- */
+ * Component: Local Search
+ * -------------------------------------------------------------------------- */
 
 :root {
   --vp-local-search-bg: var(--vp-c-bg);
   --vp-local-search-result-bg: var(--vp-c-bg);
   --vp-local-search-result-border: var(--vp-c-divider);
-  --vp-local-search-result-selected-bg: var(--vp-c-bg);
-  --vp-local-search-result-selected-border: var(--vp-c-brand-1);
-  --vp-local-search-highlight-bg: var(--vp-c-brand-1);
-  --vp-local-search-highlight-text: var(--vp-c-neutral-inverse);
+  --vp-local-search-result-selected-bg: rgba(0, 245, 255, 0.08);
+  --vp-local-search-result-selected-border: var(--neon-cyan);
+  --vp-local-search-highlight-bg: var(--neon-cyan);
+  --vp-local-search-highlight-text: var(--vp-c-black);
+}
+
+/* ============================================================================
+ * 自定义动效与样式
+ * ============================================================================ */
+
+/**
+ * 全局动画关键帧
+ * -------------------------------------------------------------------------- */
+
+@keyframes neon-pulse {
+  0%, 100% {
+    box-shadow: 0 0 5px var(--neon-cyan), 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan);
+  }
+  50% {
+    box-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan), 0 0 40px var(--neon-cyan);
+  }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes scan-line {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes glitch {
+  0%, 90%, 100% { transform: translate(0); }
+  92% { transform: translate(-2px, 2px); }
+  94% { transform: translate(2px, -2px); }
+  96% { transform: translate(-2px, -2px); }
+  98% { transform: translate(2px, 2px); }
+}
+
+@keyframes border-flow {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--neon-cyan); }
+}
+
+@keyframes particle-float {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0;
+  }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% {
+    transform: translate(var(--tx, 100px), var(--ty, -100px)) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/**
+ * 页面整体效果
+ * -------------------------------------------------------------------------- */
+
+/* 深色模式背景网格效果 */
+.dark body {
+  background-image:
+    linear-gradient(rgba(0, 245, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 245, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-attachment: fixed;
+}
+
+/* 扫描线效果 */
+.dark body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+  animation: scan-line 8s linear infinite;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.3;
+}
+
+/**
+ * 导航栏样式
+ * -------------------------------------------------------------------------- */
+
+.VPNav {
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+.dark .VPNav {
+  background: rgba(10, 10, 15, 0.85) !important;
+  border-bottom: 1px solid rgba(0, 245, 255, 0.1);
+}
+
+/* 导航链接悬浮效果 */
+.VPNavBarMenuLink {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.VPNavBarMenuLink::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-neon);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(-50%);
+}
+
+.VPNavBarMenuLink:hover::after,
+.VPNavBarMenuLink.active::after {
+  width: 100%;
+}
+
+.dark .VPNavBarMenuLink:hover {
+  color: var(--neon-cyan) !important;
+  text-shadow: 0 0 10px var(--neon-cyan);
+}
+
+/* Logo 发光效果 */
+.dark .VPNavBarTitle .logo {
+  filter: drop-shadow(0 0 8px rgba(0, 245, 255, 0.5));
+  transition: filter 0.3s ease;
+}
+
+.dark .VPNavBarTitle:hover .logo {
+  filter: drop-shadow(0 0 15px rgba(0, 245, 255, 0.8));
+}
+
+/**
+ * 侧边栏样式
+ * -------------------------------------------------------------------------- */
+
+.dark .VPSidebar {
+  background: linear-gradient(180deg, rgba(15, 15, 24, 0.95) 0%, rgba(10, 10, 15, 0.98) 100%) !important;
+  border-right: 1px solid rgba(0, 245, 255, 0.08);
+}
+
+/* 侧边栏链接动效 */
+.VPSidebarItem .link {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 8px;
+  margin: 2px 0;
+}
+
+.dark .VPSidebarItem .link:hover {
+  background: rgba(0, 245, 255, 0.08);
+  color: var(--neon-cyan);
+  padding-left: 20px;
+}
+
+.dark .VPSidebarItem .link.active {
+  background: linear-gradient(90deg, rgba(0, 245, 255, 0.15) 0%, transparent 100%);
+  color: var(--neon-cyan);
+  border-left: 3px solid var(--neon-cyan);
+  box-shadow: inset 0 0 20px rgba(0, 245, 255, 0.1);
+}
+
+/* 侧边栏分组标题 */
+.dark .VPSidebarItem .text {
+  transition: all 0.3s ease;
+}
+
+.dark .VPSidebarItem:hover > .item > .text {
+  color: var(--neon-cyan);
+}
+
+/**
+ * 首页英雄区样式
+ * -------------------------------------------------------------------------- */
+
+/* 英雄区标题渐变动画 */
+.VPHero .name {
+  background: var(--gradient-neon);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: gradient-shift 5s ease infinite;
+}
+
+/* 英雄区描述文字 */
+.dark .VPHero .tagline {
+  color: var(--vp-c-text-2);
+  text-shadow: 0 0 30px rgba(0, 245, 255, 0.2);
+}
+
+/* 英雄区图片浮动效果 */
+.VPHero .image-container {
+  animation: float 6s ease-in-out infinite;
+}
+
+.dark .VPHero .image-container .image-bg {
+  background: radial-gradient(ellipse at center, rgba(0, 245, 255, 0.2) 0%, rgba(191, 0, 255, 0.15) 40%, transparent 70%);
+  animation: neon-pulse 4s ease-in-out infinite;
+}
+
+/* 英雄区按钮 */
+.VPHero .actions .VPButton {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.VPHero .actions .VPButton.brand {
+  background: var(--gradient-neon);
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+  border: none;
+}
+
+.VPHero .actions .VPButton.brand:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 40px rgba(0, 245, 255, 0.4), 0 0 60px rgba(191, 0, 255, 0.3);
+}
+
+.dark .VPHero .actions .VPButton.alt {
+  border: 1px solid rgba(0, 245, 255, 0.5);
+  background: rgba(0, 245, 255, 0.05);
+}
+
+.dark .VPHero .actions .VPButton.alt:hover {
+  border-color: var(--neon-cyan);
+  background: rgba(0, 245, 255, 0.15);
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.3), inset 0 0 20px rgba(0, 245, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+/* 按钮扫光效果 */
+.VPHero .actions .VPButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.VPHero .actions .VPButton:hover::before {
+  left: 100%;
+}
+
+/**
+ * 特性卡片样式
+ * -------------------------------------------------------------------------- */
+
+.VPFeature {
+  position: relative;
+  background: var(--gradient-card);
+  border: 1px solid rgba(0, 245, 255, 0.1);
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  animation: fade-in-up 0.6s ease-out backwards;
+}
+
+/* 卡片错开动画 */
+.VPFeature:nth-child(1) { animation-delay: 0.1s; }
+.VPFeature:nth-child(2) { animation-delay: 0.2s; }
+.VPFeature:nth-child(3) { animation-delay: 0.3s; }
+.VPFeature:nth-child(4) { animation-delay: 0.4s; }
+.VPFeature:nth-child(5) { animation-delay: 0.5s; }
+.VPFeature:nth-child(6) { animation-delay: 0.6s; }
+
+.dark .VPFeature {
+  background: linear-gradient(135deg, rgba(20, 20, 31, 0.8) 0%, rgba(10, 10, 15, 0.9) 100%);
+  backdrop-filter: blur(10px);
+}
+
+/* 卡片悬浮效果 */
+.VPFeature:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(0, 245, 255, 0.4);
+}
+
+.dark .VPFeature:hover {
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(0, 245, 255, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* 卡片边框流动效果 */
+.VPFeature::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink), var(--neon-cyan));
+  background-size: 200% 100%;
+  border-radius: 18px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: border-flow 3s linear infinite;
+}
+
+.VPFeature:hover::before {
+  opacity: 1;
+}
+
+.VPFeature::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  background: var(--vp-c-bg);
+  border-radius: 15px;
+  z-index: -1;
+}
+
+.dark .VPFeature::after {
+  background: linear-gradient(135deg, rgba(20, 20, 31, 0.95) 0%, rgba(10, 10, 15, 0.98) 100%);
+}
+
+/* 特性图标发光 */
+.VPFeature .icon {
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+
+.dark .VPFeature:hover .icon {
+  filter: drop-shadow(0 0 10px var(--neon-cyan));
+  transform: scale(1.1);
+}
+
+/* 特性标题 */
+.VPFeature .title {
+  font-family: 'Orbitron', 'Rajdhani', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.dark .VPFeature:hover .title {
+  color: var(--neon-cyan);
+  text-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
+}
+
+/**
+ * 文档内容样式
+ * -------------------------------------------------------------------------- */
+
+/* 文章容器进入动画 */
+.VPDoc .container {
+  animation: fade-in-up 0.5s ease-out;
+}
+
+/* 标题样式 */
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4 {
+  font-family: 'Orbitron', 'Rajdhani', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.dark .vp-doc h1 {
+  background: var(--gradient-neon);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% 200%;
+  animation: gradient-shift 5s ease infinite;
+}
+
+.dark .vp-doc h2 {
+  color: var(--neon-cyan);
+  text-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+  border-bottom: 1px solid rgba(0, 245, 255, 0.2);
+  padding-bottom: 10px;
+}
+
+.dark .vp-doc h3 {
+  color: var(--neon-purple);
+}
+
+/* 锚点链接 */
+.vp-doc .header-anchor {
+  color: var(--neon-cyan);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.vp-doc h1:hover .header-anchor,
+.vp-doc h2:hover .header-anchor,
+.vp-doc h3:hover .header-anchor {
+  opacity: 1;
+}
+
+/* 链接样式 */
+.dark .vp-doc a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.dark .vp-doc a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gradient-neon);
+  transition: width 0.3s ease;
+}
+
+.dark .vp-doc a:hover {
+  text-shadow: 0 0 10px var(--neon-cyan);
+}
+
+.dark .vp-doc a:hover::after {
+  width: 100%;
+}
+
+/* 行内代码 */
+.dark .vp-doc :not(pre) > code {
+  background: rgba(0, 245, 255, 0.1);
+  border: 1px solid rgba(0, 245, 255, 0.2);
+  color: var(--neon-cyan);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-family: 'JetBrains Mono', monospace;
+  transition: all 0.3s ease;
+}
+
+.dark .vp-doc :not(pre) > code:hover {
+  background: rgba(0, 245, 255, 0.15);
+  box-shadow: 0 0 10px rgba(0, 245, 255, 0.2);
+}
+
+/**
+ * 代码块样式
+ * -------------------------------------------------------------------------- */
+
+.dark .vp-doc div[class*='language-'] {
+  background: linear-gradient(135deg, rgba(15, 15, 24, 0.95) 0%, rgba(10, 10, 15, 0.98) 100%);
+  border: 1px solid rgba(0, 245, 255, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 代码块顶部装饰线 */
+.dark .vp-doc div[class*='language-']::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-neon);
+  background-size: 200% 100%;
+  animation: border-flow 3s linear infinite;
+}
+
+/* 代码语言标签 */
+.dark .vp-doc div[class*='language-'] > span.lang {
+  color: var(--neon-purple);
+  font-family: 'Orbitron', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(191, 0, 255, 0.5);
+}
+
+/* 代码行高亮 */
+.dark .vp-doc div[class*='language-'] .line.highlighted {
+  background: linear-gradient(90deg, rgba(0, 245, 255, 0.1) 0%, transparent 100%);
+  border-left: 3px solid var(--neon-cyan);
+}
+
+/* 代码复制按钮 */
+.dark .vp-doc div[class*='language-'] button.copy {
+  border: 1px solid rgba(0, 245, 255, 0.3);
+  background: rgba(0, 245, 255, 0.05);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.dark .vp-doc div[class*='language-'] button.copy:hover {
+  border-color: var(--neon-cyan);
+  background: rgba(0, 245, 255, 0.15);
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.3);
+}
+
+/**
+ * 自定义容器样式
+ * -------------------------------------------------------------------------- */
+
+.dark .vp-doc .custom-block {
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.dark .vp-doc .custom-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+}
+
+.dark .vp-doc .custom-block.tip::before {
+  background: var(--neon-cyan);
+  box-shadow: 0 0 20px var(--neon-cyan);
+}
+
+.dark .vp-doc .custom-block.warning::before {
+  background: var(--neon-orange);
+  box-shadow: 0 0 20px var(--neon-orange);
+}
+
+.dark .vp-doc .custom-block.danger::before {
+  background: var(--neon-pink);
+  box-shadow: 0 0 20px var(--neon-pink);
+}
+
+.dark .vp-doc .custom-block.info::before {
+  background: var(--neon-blue);
+  box-shadow: 0 0 20px var(--neon-blue);
+}
+
+/* 容器标题 */
+.dark .vp-doc .custom-block .custom-block-title {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.dark .vp-doc .custom-block.tip .custom-block-title {
+  color: var(--neon-cyan);
+  text-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
+}
+
+/**
+ * 表格样式
+ * -------------------------------------------------------------------------- */
+
+.dark .vp-doc table {
+  border: 1px solid rgba(0, 245, 255, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.dark .vp-doc table th {
+  background: linear-gradient(135deg, rgba(0, 245, 255, 0.1) 0%, rgba(191, 0, 255, 0.1) 100%);
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  color: var(--neon-cyan);
+  letter-spacing: 0.5px;
+}
+
+.dark .vp-doc table tr {
+  transition: all 0.3s ease;
+}
+
+.dark .vp-doc table tr:hover {
+  background: rgba(0, 245, 255, 0.05);
+}
+
+.dark .vp-doc table td,
+.dark .vp-doc table th {
+  border-color: rgba(0, 245, 255, 0.1);
+}
+
+/**
+ * 页脚样式
+ * -------------------------------------------------------------------------- */
+
+.dark .VPFooter {
+  border-top: 1px solid rgba(0, 245, 255, 0.1);
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 245, 255, 0.02) 100%);
+}
+
+.dark .VPFooter .message,
+.dark .VPFooter .copyright {
+  color: var(--vp-c-text-3);
+  transition: all 0.3s ease;
+}
+
+.dark .VPFooter:hover .message {
+  color: var(--neon-cyan);
+  text-shadow: 0 0 10px rgba(0, 245, 255, 0.3);
+}
+
+/**
+ * 搜索框样式
+ * -------------------------------------------------------------------------- */
+
+.dark .DocSearch-Button {
+  background: rgba(0, 245, 255, 0.05) !important;
+  border: 1px solid rgba(0, 245, 255, 0.2) !important;
+  border-radius: 10px !important;
+  transition: all 0.3s ease !important;
+}
+
+.dark .DocSearch-Button:hover {
+  border-color: var(--neon-cyan) !important;
+  box-shadow: 0 0 20px rgba(0, 245, 255, 0.2) !important;
+}
+
+.dark .DocSearch-Button-Key {
+  background: linear-gradient(135deg, rgba(0, 245, 255, 0.2) 0%, rgba(191, 0, 255, 0.2) 100%) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/**
+ * 滚动条样式
+ * -------------------------------------------------------------------------- */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: rgba(10, 10, 15, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-divider);
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--neon-cyan), var(--neon-purple));
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-text-3);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-cyan);
+  box-shadow: 0 0 10px var(--neon-cyan);
+}
+
+/**
+ * 选择文本样式
+ * -------------------------------------------------------------------------- */
+
+::selection {
+  background: rgba(0, 245, 255, 0.3);
+  color: var(--vp-c-text-1);
+}
+
+.dark ::selection {
+  background: rgba(0, 245, 255, 0.4);
+  color: var(--vp-c-white);
+  text-shadow: 0 0 10px var(--neon-cyan);
+}
+
+/**
+ * 页面切换动画
+ * -------------------------------------------------------------------------- */
+
+.VPContent {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/**
+ * 响应式优化
+ * -------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .VPFeature {
+    animation-delay: 0s !important;
+  }
+
+  .VPHero .image-container {
+    animation: none;
+  }
+}
+
+/* 减少动画（无障碍） */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

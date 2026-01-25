@@ -48,3 +48,11 @@ pnpm docs:preview
 ## Deployment
 
 Automatically deploys to GitHub Pages on push to `main` branch via `.github/workflows/deploy.yml`. Build output goes to `docs/.vitepress/dist`.
+
+## Recommended Skills
+
+Use these Claude Code skills when working on this project:
+
+- `/doc-coauthoring` - For writing and refining documentation content
+- `/frontend-design` - For creating web components or UI designs
+- `/skill-creator` - For creating custom project-specific skills
