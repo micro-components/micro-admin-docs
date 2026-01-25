@@ -17,7 +17,9 @@
     "register:components": "vitepress-rc",
     "dev": "vitepress dev",
     "build": "vitepress build",
-    "preview": "vitepress preview"
+    "preview": "vitepress preview",
+    "spec:generate": "node scripts/spec-generator.js",
+    "spec:validate": "echo 'Spec 验证功能开发中...'"
   },
   "author": {
     "name": "MicroAdmin Team",

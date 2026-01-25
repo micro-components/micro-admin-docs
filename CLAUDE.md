@@ -258,6 +258,79 @@ search: {
 
 ---
 
+## Spec 开发流程 (Spec Development Workflow)
+
+本项目采用标准的 Spec（功能规格）开发流程，确保从需求到上线的每个环节都有明确规范。
+
+### 核心文档
+
+| 文档 | 路径 | 说明 |
+|------|------|------|
+| 完整流程规范 | `docs/specs/SPEC_WORKFLOW.md` | 详细的 Spec 开发流程 |
+| 快速参考卡片 | `docs/specs/QUICK_REFERENCE.md` | 可打印的快速参考指南 |
+| 状态看板 | `docs/specs/STATUS_BOARD.md` | 实时 Spec 状态追踪 |
+| README | `docs/specs/README.md` | Spec 文档导航 |
+
+### 快速开始
+
+```bash
+# 创建新 Spec（交互式）
+pnpm spec:generate
+
+# 创建新 Spec（命令行参数）
+pnpm spec:generate --name "用户认证" --type feature --priority P1
+
+# 验证所有 Spec
+pnpm spec:validate
+```
+
+### Claude Code 命令
+
+```bash
+# 创建新 Spec
+/project:new-spec user-auth
+
+# 验证 Spec
+/project:validate-spec
+
+# 查看 Spec 状态
+/project:spec-status
+```
+
+### Spec 开发流程
+
+```
+需求收集 → 规格编写 → 评审确认 → 开发实现 → 验收检查 → 测试覆盖 → 发布上线 → 归档更新
+```
+
+### Spec 类型
+
+| 类型 | 目录 | 说明 |
+|------|------|------|
+| feature | `docs/specs/features/` | 新功能规格 |
+| component | `docs/specs/components/` | 组件规格 |
+| api | `docs/specs/apis/` | API 接口规格 |
+| skill | `docs/specs/skills/` | Claude Code 技能规格 |
+
+### Spec 状态
+
+| 状态 | 标签 | 说明 |
+|------|------|------|
+| Draft | 🟨 | 草稿，待评审 |
+| Review | 🟦 | 评审中 |
+| Approved | 🟩 | 已批准，待开发 |
+| InProgress | 🟪 | 开发中 |
+| Testing | 🟧 | 测试中 |
+| Done | ✅ | 已完成 |
+
+### 相关链接
+
+- [完整流程文档](https://github.com/your-repo/micro-admin-docs/blob/main/docs/specs/SPEC_WORKFLOW.md)
+- [快速参考卡片](https://github.com/your-repo/micro-admin-docs/blob/main/docs/specs/QUICK_REFERENCE.md)
+- [状态看板](https://github.com/your-repo/micro-admin-docs/blob/main/docs/specs/STATUS_BOARD.md)
+
+---
+
 ## 开发指南 (Development Guide)
 
 ### 添加新文档

@@ -1,0 +1,107 @@
+name: Spec 验证
+
+on:
+  pull_request:
+    paths:
+      - 'docs/specs/**'
+  workflow_dispatch:
+
+jobs:
+  validate-specs:
+    name: 验证 Spec 文档
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 设置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 验证 Spec 格式
+        run: |
+          echo "验证 Spec 文档格式..."
+
+          # 检查 Spec 目录结构
+          if [ ! -d "docs/specs" ]; then
+            echo "✗ 错误: docs/specs 目录不存在"
+            exit 1
+          fi
+
+          # 验证 Spec 文件
+          for dir in docs/specs/*/; do
+            if [ -d "$dir" ]; then
+              echo "检查目录: $dir"
+              for file in "$dir"*.md; do
+                if [ -f "$file" ]; then
+                  echo "  - $file"
+
+                  # 检查文件名格式
+                  if ! [[ "$file" =~ (FEAT|COMP|API|SKILL)-[0-9]{3}.*\.md$ ]]; then
+                    echo "    ✗ 文件名格式不正确"
+                    exit 1
+                  fi
+
+                  # 检查必需章节
+                  required_sections=("## 元信息" "## 背景与目标" "## 功能需求" "## 技术方案")
+                  for section in "${required_sections[@]}"; do
+                    if ! grep -q "$section" "$file"; then
+                      echo "    ✗ 缺少必需章节: $section"
+                      exit 1
+                    fi
+                  done
+
+                  echo "    ✓ 格式验证通过"
+                fi
+              done
+            fi
+          done
+
+          echo "✓ 所有 Spec 文档验证通过"
+
+      - name: 检查 Spec 状态
+        run: |
+          echo "检查 Spec 状态..."
+
+          # 检查状态看板
+          if [ -f "docs/specs/STATUS_BOARD.md" ]; then
+            echo "✓ 状态看板存在"
+          else
+            echo "⚠ 警告: 状态看板不存在"
+          fi
+
+      - name: 验证模板
+        run: |
+          echo "验证 Spec 模板..."
+
+          template_dir="docs/specs/templates"
+          templates=("feature-spec.md" "component-spec.md" "api-spec.md")
+
+          for template in "${templates[@]}"; do
+            template_path="$template_dir/$template"
+            if [ -f "$template_path" ]; then
+              echo "✓ 模板存在: $template"
+            else
+              echo "⚠ 警告: 模板不存在: $template"
+            fi
+          done
+
+      - name: 生成验证报告
+        if: always()
+        run: |
+          echo "# Spec 验证报告" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**验证时间**: $(date)" >> $GITHUB_STEP_SUMMARY
+          echo "**触发方式**: ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## 验证结果" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ ${{ job.status }} == 'success' ]; then
+            echo "✅ 所有 Spec 文档验证通过" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ Spec 验证失败，请检查详细信息" >> $GITHUB_STEP_SUMMARY
+          fi
