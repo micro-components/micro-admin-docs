@@ -36,14 +36,13 @@
 # 架构规则
 
 ## 目录结构
-```
+
 src/
 ├── components/    # 可复用组件
 ├── pages/        # 页面组件
 ├── hooks/        # 自定义 Hooks
 ├── utils/        # 工具函数
 └── api/          # API 调用
-```
 
 ## 设计原则
 - 单一职责原则
@@ -108,6 +107,7 @@ touch .claude-code/rules/security.md
 ## 类型定义
 
 ### 优先使用 interface
+
 ```typescript
 // ✅ 好
 interface User {
@@ -123,6 +123,7 @@ type User = {
 ```
 
 ### 禁止使用 any
+
 ```typescript
 // ✅ 好
 const data: unknown = fetchData();
@@ -136,6 +137,7 @@ console.log(data);
 ```
 
 ### 显式类型声明
+
 ```typescript
 // ✅ 好
 function greet(name: string): string {
@@ -173,6 +175,7 @@ function greet(name) {
 - Props 使用 interface 定义
 
 ## Hooks 使用规则
+
 ```typescript
 // ✅ 正确
 function MyComponent() {
@@ -216,13 +219,12 @@ function BadComponent() {
 - chore/xxx: 构建/工具更新
 
 ## 提交信息格式
-```
+
 <type>(<scope>): <subject>
 
 <body>
 
 <footer>
-```
 
 ### Type 类型
 - feat: 新功能
@@ -234,7 +236,7 @@ function BadComponent() {
 - chore: 构建/工具
 
 ### 示例
-```
+
 feat(auth): add user login functionality
 
 - Add login form component
@@ -242,7 +244,6 @@ feat(auth): add user login functionality
 - Add JWT token management
 
 Closes #123
-```
 ```
 
 ## 规则优先级
