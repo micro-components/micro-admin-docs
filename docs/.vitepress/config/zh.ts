@@ -12,6 +12,7 @@ export const zh = defineConfig({
       "/other/": { base: "/other/", items: sidebarReference() },
       "/dev/": { base: "/dev/", items: sidebarEnv() },
       "/docs/": { base: "/docs/", items: sidebarDocs() },
+      "/ai/": { base: "/ai/", items: sidebarAi() },
     },
 
     editLink: {
@@ -94,14 +95,14 @@ function nav(): DefaultTheme.NavItem[] {
       activeMatch: " /other/",
     },
     {
+      text: "AI编程",
+      link: "/ai/",
+      activeMatch: " /ai/",
+    },
+    {
       text: "捐助",
       link: "/donate",
       activeMatch: " /donate/",
-    },
-    {
-      text: "AI编程",
-      link: "/dev/ai",
-      activeMatch: " /ai/",
     },
     {
       text: "关于",
@@ -221,6 +222,101 @@ function sidebarEnv(): DefaultTheme.SidebarItem[] {
         { text: "Git", link: "git" },
         { text: "NodeJs", link: "nodejs" },
         { text: "MySql", link: "mysql" },
+      ],
+    },
+  ];
+}
+function sidebarAi(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: "Claude Code 简介",
+      items: [
+        { text: "什么是 Claude Code", link: "index" },
+        { text: "核心特性", link: "features" },
+        { text: "适用场景", link: "use-cases" },
+      ],
+    },
+    {
+      text: "安装与配置",
+      items: [
+        { text: "系统要求", link: "installation/requirements" },
+        { text: "安装指南", link: "installation/install" },
+        { text: "环境变量配置", link: "installation/env-config" },
+        { text: "API密钥配置", link: "installation/api-key" },
+        { text: "常见安装问题", link: "installation/troubleshooting" },
+      ],
+    },
+    {
+      text: "基础配置",
+      items: [
+        { text: "项目初始化", link: "basic/project-init" },
+        { text: "工作空间配置", link: "basic/workspace" },
+        { text: "提示词配置", link: "basic/prompt-config" },
+        { text: "规则与记忆管理", link: "basic/rules-memory" },
+      ],
+    },
+    {
+      text: "VS Code 集成",
+      items: [
+        { text: "安装 VS Code 扩展", link: "vscode/install-extension" },
+        { text: "配置扩展设置", link: "vscode/extension-settings" },
+        { text: "快捷键配置", link: "vscode/keybindings" },
+        { text: "工作区设置", link: "vscode/workspace-settings" },
+      ],
+    },
+    {
+      text: "开发工作流",
+      items: [
+        { text: "新建项目流程", link: "workflow/new-project" },
+        { text: "代码生成工作流", link: "workflow/code-generation" },
+        { text: "调试与重构", link: "workflow/debug-refactor" },
+        { text: "测试工作流", link: "workflow/testing" },
+      ],
+    },
+    {
+      text: "高级配置",
+      items: [
+        { text: "自定义提示词模板", link: "advanced/custom-prompts" },
+        { text: "创建自定义规则", link: "advanced/custom-rules" },
+        { text: "工具配置", link: "advanced/tools-config" },
+        { text: "技能包使用", link: "advanced/skills" },
+        { text: "子代理配置", link: "advanced/agents" },
+      ],
+    },
+    {
+      text: "最佳实践",
+      items: [
+        { text: "提示词编写技巧", link: "best-practices/prompting" },
+        { text: "代码质量保证", link: "best-practices/code-quality" },
+        { text: "效率提升技巧", link: "best-practices/efficiency" },
+        { text: "团队协作", link: "best-practices/collaboration" },
+      ],
+    },
+    {
+      text: "常见任务示例",
+      items: [
+        { text: "创建 React 组件", link: "examples/react-component" },
+        { text: "编写测试用例", link: "examples/test-cases" },
+        { text: "重构代码", link: "examples/refactor" },
+        { text: "添加新功能", link: "examples/feature" },
+        { text: "修复 Bug", link: "examples/bugfix" },
+      ],
+    },
+    {
+      text: "集成服务",
+      items: [
+        { text: "数据库集成", link: "integration/database" },
+        { text: "部署服务集成", link: "integration/deploy" },
+        { text: "第三方 API 集成", link: "integration/third-party" },
+      ],
+    },
+    {
+      text: "故障排除",
+      items: [
+        { text: "常见错误", link: "troubleshooting/common-errors" },
+        { text: "性能优化", link: "troubleshooting/performance" },
+        { text: "网络问题", link: "troubleshooting/network" },
+        { text: "调试技巧", link: "troubleshooting/debugging" },
       ],
     },
   ];
