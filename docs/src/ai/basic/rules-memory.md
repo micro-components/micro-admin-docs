@@ -47,7 +47,7 @@
 # 架构原则
 
 ## 目录结构
-```
+
 src/
 ├── components/    # 可复用组件
 ├── pages/        # 页面组件
@@ -56,7 +56,6 @@ src/
 ├── api/          # API 调用
 ├── types/        # TypeScript 类型
 └── constants/    # 常量
-```
 
 ## 设计原则
 - 单一职责原则
@@ -80,13 +79,12 @@ src/
 - chore/xxx: 构建/工具更新
 
 ## 提交信息格式
-```
+
 <type>(<scope>): <subject>
 
 <body>
 
 <footer>
-```
 
 Type 类型：
 - feat: 新功能
@@ -98,7 +96,7 @@ Type 类型：
 - chore: 构建/工具
 
 示例：
-```
+
 feat(auth): add user login functionality
 
 - Add login form component
@@ -106,7 +104,6 @@ feat(auth): add user login functionality
 - Add JWT token management
 
 Closes #123
-```
 ```
 
 #### 4. 安全规则
@@ -302,9 +299,9 @@ function BadComponent() {
 - 使用 React.memo 避免不必要的重渲染
 ```
 
-## 记忆（Memory）
+### 记忆（Memory）
 
-### 什么是记忆
+#### 什么是记忆
 
 记忆是 Claude Code 持久化的项目知识，包括：
 
