@@ -108,47 +108,15 @@ touch .claude-code/rules/security.md
 
 ### 优先使用 interface
 
-```typescript
-// ✅ 好
-interface User {
-  id: string;
-  name: string;
-}
-
-// ❌ 不好
-type User = {
-  id: string;
-  name: string;
-};
-```
+使用 interface 定义对象类型，type 定义联合类型或工具类型。
 
 ### 禁止使用 any
 
-```typescript
-// ✅ 好
-const data: unknown = fetchData();
-if (typeof data === 'string') {
-  console.log(data);
-}
-
-// ❌ 不好
-const data: any = fetchData();
-console.log(data);
-```
+避免使用 any 类型，优先使用 unknown 或具体类型。
 
 ### 显式类型声明
 
-```typescript
-// ✅ 好
-function greet(name: string): string {
-  return `Hello, ${name}`;
-}
-
-// ❌ 不好
-function greet(name) {
-  return `Hello, ${name}`;
-}
-```
+所有函数参数和返回值必须显式声明类型。
 
 ## 泛型使用
 - 泛型参数命名: T, U, V
@@ -176,21 +144,9 @@ function greet(name) {
 
 ## Hooks 使用规则
 
-```typescript
-// ✅ 正确
-function MyComponent() {
-  const [state, setState] = useState(0);
-  const data = useSWR('/api/data');
-  return <div>{state}</div>;
-}
-
-// ❌ 错误：在条件中使用 Hooks
-function BadComponent() {
-  if (condition) {
-    const [state, setState] = useState();
-  }
-}
-```
+- Hooks 必须在组件顶层调用
+- 禁止在条件语句、循环或嵌套函数中使用 Hooks
+- 自定义 Hooks 必须以 use 开头
 
 ## 性能优化
 - 使用 React.memo 优化纯组件
@@ -201,6 +157,7 @@ function BadComponent() {
 ## 事件处理
 - 使用 useCallback 稳定回调函数
 - 事件处理函数以 handle 开头
+```
 ```
 
 ### Git 规则
@@ -220,11 +177,9 @@ function BadComponent() {
 
 ## 提交信息格式
 
-<type>(<scope>): <subject>
+格式：`<type>(<scope>): <subject>`
 
-<body>
-
-<footer>
+其中 `<body>` 和 `<footer>` 是可选部分。
 
 ### Type 类型
 - feat: 新功能
@@ -237,6 +192,7 @@ function BadComponent() {
 
 ### 示例
 
+```
 feat(auth): add user login functionality
 
 - Add login form component
@@ -244,6 +200,7 @@ feat(auth): add user login functionality
 - Add JWT token management
 
 Closes #123
+```
 ```
 
 ## 规则优先级

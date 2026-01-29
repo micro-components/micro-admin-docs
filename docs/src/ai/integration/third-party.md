@@ -88,4 +88,4 @@ claude-code ask "为第三方 API 创建 Mock 服务，用于测试"
 
 ---
 
-返回：[集成服务](../integration)
+返回：[AI 集成](../index.md#集成服务)
