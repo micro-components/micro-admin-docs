@@ -142,4 +142,3 @@ type ApiResponse<T> = {
 ## 相关链接
 
 - [组件库文档](https://github.com/micro-components/micro-design-admin)
-- [设计规范](/design/guidelines)
