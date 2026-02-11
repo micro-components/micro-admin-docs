@@ -152,6 +152,24 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       ],
     },
     {
+      text: "SDD开发配置",
+      items: [
+        { text: "SDD开发指南", link: "sdd-development" },
+      ],
+    },
+    {
+      text: "系统业务模块",
+      items: [
+        { text: "CRM客户管理", link: "crm" },
+        { text: "ERP企业资源", link: "erp" },
+        { text: "商城系统", link: "mall" },
+        { text: "工作流引擎", link: "workflow" },
+        { text: "IoT物联网", link: "iot" },
+        { text: "BI数据可视化", link: "bi" },
+        { text: "互联网医院", link: "hospital" },
+      ],
+    },
+    {
       text: "扩展使用",
       items: [
         { text: "使用图标", link: "use-icons" },
