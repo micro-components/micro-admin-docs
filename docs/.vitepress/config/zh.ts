@@ -136,7 +136,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
     {
       text: "指南",
       items: [
-        { text: "介绍", link: "introduction" },
+        { text: "项目介绍", link: "introduction" },
         { text: "快速开始", link: "get-start" },
         { text: "目录结构", link: "directory-structure" },
       ],
@@ -144,11 +144,11 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
     {
       text: "基本配置",
       items: [
-        { text: "请求服务配置", link: "service" },
-        { text: "路由和菜单", link: "modify-routers" },
-        { text: "自定义主题", link: "custom-theme" },
+        { text: "服务配置", link: "service" },
+        { text: "路由菜单", link: "modify-routers" },
         { text: "权限控制", link: "permission-control" },
         { text: "环境变量", link: "env-variable" },
+        { text: "自定义主题", link: "custom-theme" },
       ],
     },
     {
