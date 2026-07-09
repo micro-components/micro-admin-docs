@@ -269,8 +269,16 @@ function sidebarAi(): DefaultTheme.SidebarItem[] {
       items: [
         { text: "项目初始化", link: "basic/project-init" },
         { text: "工作空间配置", link: "basic/workspace" },
-        { text: "提示词配置", link: "basic/prompt-config" },
         { text: "规则与记忆管理", link: "basic/rules-memory" },
+      ],
+    },
+    {
+      text: "提示词",
+      items: [
+        { text: "提示词配置", link: "basic/prompt-config" },
+        { text: "自定义提示词模板", link: "advanced/custom-prompts" },
+        { text: "创建自定义规则", link: "advanced/custom-rules" },
+        { text: "提示词编写技巧", link: "best-practices/prompting" },
       ],
     },
     {

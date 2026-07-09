@@ -1,0 +1,118 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1783639409983,
+  "projectRoot": "E:\\project\\micro-admin-docs",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      }
+    ],
+    "frameworks": [],
+    "packageManager": "pnpm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "pnpm build",
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": "pnpm dev",
+    "scripts": {
+      "docs:dev": "vitepress dev docs",
+      "docs:build": "vitepress build docs",
+      "docs:serve": "vitepress serve docs",
+      "docs:preview": "vitepress preview docs",
+      "register:components": "vitepress-rc",
+      "dev": "vitepress dev",
+      "build": "vitepress build",
+      "preview": "vitepress preview",
+      "spec:generate": "node scripts/spec-generator.js",
+      "spec:validate": "echo 'Spec 验证功能开发中...'"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "docs",
+      "scripts"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "docs": {
+      "path": "docs",
+      "purpose": "Documentation",
+      "fileCount": 0,
+      "lastAccessed": 1783639409727,
+      "keyFiles": []
+    },
+    "scripts": {
+      "path": "scripts",
+      "purpose": "Build/utility scripts",
+      "fileCount": 1,
+      "lastAccessed": 1783639409729,
+      "keyFiles": [
+        "spec-generator.js"
+      ]
+    },
+    "docs\\src": {
+      "path": "docs\\src",
+      "purpose": "Source code",
+      "fileCount": 2,
+      "lastAccessed": 1783639409771,
+      "keyFiles": [
+        "donate.md",
+        "index.md"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "docs\\.vitepress\\config\\zh.ts",
+      "accessCount": 3,
+      "lastAccessed": 1783640447052,
+      "type": "file"
+    },
+    {
+      "path": "",
+      "accessCount": 1,
+      "lastAccessed": 1783640344987,
+      "type": "directory"
+    },
+    {
+      "path": "docs\\.vitepress\\config\\en.ts",
+      "accessCount": 1,
+      "lastAccessed": 1783640409766,
+      "type": "file"
+    },
+    {
+      "path": "docs\\src\\ai",
+      "accessCount": 1,
+      "lastAccessed": 1783640410229,
+      "type": "directory"
+    },
+    {
+      "path": "docs\\src\\ai\\basic\\prompt-config.md",
+      "accessCount": 1,
+      "lastAccessed": 1783640410491,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}
