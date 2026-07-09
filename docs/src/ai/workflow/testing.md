@@ -360,4 +360,4 @@ jobs:
 
 ---
 
-下一步：[高级配置 - 自定义提示词模板](../advanced/custom-prompts)
+下一步：[高级配置 - 自定义提示词模板](../prompts/custom-prompts)

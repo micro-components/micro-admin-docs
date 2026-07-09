@@ -282,4 +282,4 @@ claude-code agent code-reviewer
 
 ---
 
-返回：[高级配置](../advanced/custom-prompts)
+返回：[高级配置](../prompts/custom-prompts)

@@ -492,4 +492,4 @@ claude-code workspace create --template fullstack --name my-app
 
 ---
 
-下一步：[提示词配置](prompt-config)
+下一步：[提示词配置](../prompts/prompt-config)

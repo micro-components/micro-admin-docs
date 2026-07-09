@@ -465,4 +465,4 @@ claude-code generate --template create-component \
 
 ---
 
-下一步：[规则与记忆管理](rules-memory)
+下一步：[规则与记忆管理](../basic/rules-memory)

@@ -291,4 +291,4 @@ claude-code rules delete --name old-rule
 
 ---
 
-下一步：[工具配置](tools-config)
+下一步：[工具配置](../advanced/tools-config)

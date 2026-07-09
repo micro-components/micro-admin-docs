@@ -315,4 +315,4 @@ claude-code ask "配置邮件通知，在代码审查和部署时通知团队"
 
 ---
 
-返回：[最佳实践](../best-practices/prompting)
+返回：[最佳实践](../prompts/prompting)

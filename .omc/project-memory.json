@@ -85,15 +85,51 @@
   "hotPaths": [
     {
       "path": "docs\\.vitepress\\config\\zh.ts",
-      "accessCount": 3,
-      "lastAccessed": 1783640447052,
+      "accessCount": 4,
+      "lastAccessed": 1783640944914,
       "type": "file"
     },
     {
       "path": "",
-      "accessCount": 1,
-      "lastAccessed": 1783640344987,
+      "accessCount": 3,
+      "lastAccessed": 1783641300271,
       "type": "directory"
+    },
+    {
+      "path": "docs\\src\\ai\\prompts\\prompt-config.md",
+      "accessCount": 2,
+      "lastAccessed": 1783641171371,
+      "type": "file"
+    },
+    {
+      "path": "docs\\src\\ai\\prompts\\custom-rules.md",
+      "accessCount": 2,
+      "lastAccessed": 1783641177254,
+      "type": "file"
+    },
+    {
+      "path": "docs\\src\\ai\\prompts\\prompting.md",
+      "accessCount": 2,
+      "lastAccessed": 1783641186831,
+      "type": "file"
+    },
+    {
+      "path": "docs\\src\\ai\\best-practices\\collaboration.md",
+      "accessCount": 2,
+      "lastAccessed": 1783641200614,
+      "type": "file"
+    },
+    {
+      "path": "docs\\src\\ai\\advanced\\agents.md",
+      "accessCount": 2,
+      "lastAccessed": 1783641208274,
+      "type": "file"
+    },
+    {
+      "path": "docs\\src\\ai\\workflow\\testing.md",
+      "accessCount": 2,
+      "lastAccessed": 1783641217616,
+      "type": "file"
     },
     {
       "path": "docs\\.vitepress\\config\\en.ts",
@@ -111,6 +147,36 @@
       "path": "docs\\src\\ai\\basic\\prompt-config.md",
       "accessCount": 1,
       "lastAccessed": 1783640410491,
+      "type": "file"
+    },
+    {
+      "path": "docs\\src\\ai\\advanced\\custom-prompts.md",
+      "accessCount": 1,
+      "lastAccessed": 1783640897855,
+      "type": "file"
+    },
+    {
+      "path": "docs\\src\\ai\\best-practices\\prompting.md",
+      "accessCount": 1,
+      "lastAccessed": 1783640898977,
+      "type": "file"
+    },
+    {
+      "path": "docs\\src\\ai\\advanced\\custom-rules.md",
+      "accessCount": 1,
+      "lastAccessed": 1783640899193,
+      "type": "file"
+    },
+    {
+      "path": "docs\\src\\ai\\prompts",
+      "accessCount": 1,
+      "lastAccessed": 1783641009350,
+      "type": "directory"
+    },
+    {
+      "path": "docs\\src\\ai\\basic\\workspace.md",
+      "accessCount": 1,
+      "lastAccessed": 1783641192876,
       "type": "file"
     }
   ],
