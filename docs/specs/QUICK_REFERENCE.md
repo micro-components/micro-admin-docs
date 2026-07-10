@@ -207,7 +207,7 @@ git push origin feat/FEAT-001-用户认证
 
 - [完整流程文档](./SPEC_WORKFLOW.md)
 - [状态看板](./STATUS_BOARD.md)
-- [Claude Code 使用指南](../dev/ai.md)
+- [Claude Code 使用指南](../dev/ai)
 
 ---
 

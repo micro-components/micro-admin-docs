@@ -383,8 +383,8 @@ describe('BaseTable', () => {
 
 ### 设计稿
 
-- [表格组件设计稿](./)
-- [交互原型](./)
+- [表格组件设计稿](./table-design)
+- [交互原型](./interaction-prototype)
 
 ### 类似组件参考
 

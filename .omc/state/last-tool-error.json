@@ -1,7 +1,0 @@
-{
-  "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"cd \\\"E:/project/micro-admin-docs\\\" && git stash push docs/src/ai/prompts/projects/ -m \\\"temp stash bad replacements\\\"\"}",
-  "error": "Exit code 1\nerror: pathspec ':(prefix:0)docs/src/ai/prompts/projects/' did not match any file(s) known to git\nDid you forget to 'git add'?",
-  "timestamp": "2026-07-10T00:12:07.355Z",
-  "retry_count": 1
-}

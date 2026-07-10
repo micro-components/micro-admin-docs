@@ -84,16 +84,22 @@
   },
   "hotPaths": [
     {
+      "path": "",
+      "accessCount": 9,
+      "lastAccessed": 1783643856360,
+      "type": "directory"
+    },
+    {
       "path": "docs\\.vitepress\\config\\zh.ts",
       "accessCount": 8,
       "lastAccessed": 1783642012231,
       "type": "file"
     },
     {
-      "path": "",
-      "accessCount": 4,
-      "lastAccessed": 1783642687876,
-      "type": "directory"
+      "path": "docs\\specs\\templates\\api-spec.md",
+      "accessCount": 3,
+      "lastAccessed": 1783643535242,
+      "type": "file"
     },
     {
       "path": "docs\\src\\ai\\prompts\\prompt-config.md",
@@ -141,6 +147,54 @@
       "path": "docs\\src\\ai\\prompts\\projects\\frontend.md",
       "accessCount": 2,
       "lastAccessed": 1783642264534,
+      "type": "file"
+    },
+    {
+      "path": "docs\\specs\\templates\\feature-spec.md",
+      "accessCount": 2,
+      "lastAccessed": 1783643540825,
+      "type": "file"
+    },
+    {
+      "path": "docs\\specs\\templates\\component-spec.md",
+      "accessCount": 2,
+      "lastAccessed": 1783643546154,
+      "type": "file"
+    },
+    {
+      "path": "docs\\specs\\STATUS_BOARD.md",
+      "accessCount": 2,
+      "lastAccessed": 1783643551192,
+      "type": "file"
+    },
+    {
+      "path": "docs\\specs\\README.md",
+      "accessCount": 2,
+      "lastAccessed": 1783643556485,
+      "type": "file"
+    },
+    {
+      "path": "docs\\specs\\QUICK_REFERENCE.md",
+      "accessCount": 2,
+      "lastAccessed": 1783643564502,
+      "type": "file"
+    },
+    {
+      "path": "docs\\specs\\SPEC_WORKFLOW.md",
+      "accessCount": 2,
+      "lastAccessed": 1783643571945,
+      "type": "file"
+    },
+    {
+      "path": "docs\\src\\guide\\get-start.md",
+      "accessCount": 2,
+      "lastAccessed": 1783643578509,
+      "type": "file"
+    },
+    {
+      "path": "docs\\src\\en\\guide\\get-start.md",
+      "accessCount": 2,
+      "lastAccessed": 1783643585864,
       "type": "file"
     },
     {

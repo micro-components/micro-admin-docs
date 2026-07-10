@@ -5,7 +5,7 @@
 Micro-Admin是基于最新Vite版本开发，所以需要[Node.js](https://nodejs.org/en/) 20.x 版本来支持。
 包管理器推荐使用 [pnpm](https://pnpm.io/) 8.x 版本
 
-- [环境准备详细教程](/dev/nodejs)
+- [环境准备详细教程](../dev/nodejs)
 ## 开发环境推荐
 为了获得最佳的开发体验，我们推荐使用以下工具：
 - 代码编辑器：[VS Code](https://code.visualstudio.com/) - 最流行的代码编辑器之一，支持多种插件和扩展

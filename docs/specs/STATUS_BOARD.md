@@ -216,7 +216,7 @@ pie title Spec 优先级分布
 
 - [完整流程文档](./SPEC_WORKFLOW.md)
 - [快速参考卡片](./QUICK_REFERENCE.md)
-- [Spec 模板目录](./templates/)
+- [Spec 模板目录](../templates/)
 
 ---
 

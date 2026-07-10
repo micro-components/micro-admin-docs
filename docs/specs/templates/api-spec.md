@@ -626,14 +626,14 @@ interface PageResult<T> {
 
 ### 相关文档
 
-- [RESTful API 设计指南](./)
+- [RESTful API 设计指南](../rest-api-guide)
 - [OpenAPI 规范](https://swagger.io/specification/)
 - [JWT 规范](https://jwt.io/)
 
 ### 设计稿
 
-- [API 文档设计稿](./)
-- [数据模型图](./)
+- [API 文档设计稿](./api-design)
+- [数据模型图](./data-model)
 
 ### 类似 API 参考
 
