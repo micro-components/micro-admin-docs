@@ -85,14 +85,14 @@
   "hotPaths": [
     {
       "path": "docs\\.vitepress\\config\\zh.ts",
-      "accessCount": 4,
-      "lastAccessed": 1783640944914,
+      "accessCount": 8,
+      "lastAccessed": 1783642012231,
       "type": "file"
     },
     {
       "path": "",
-      "accessCount": 3,
-      "lastAccessed": 1783641300271,
+      "accessCount": 4,
+      "lastAccessed": 1783642687876,
       "type": "directory"
     },
     {
@@ -129,6 +129,18 @@
       "path": "docs\\src\\ai\\workflow\\testing.md",
       "accessCount": 2,
       "lastAccessed": 1783641217616,
+      "type": "file"
+    },
+    {
+      "path": "docs\\src\\ai\\prompts\\projects\\documentation.md",
+      "accessCount": 2,
+      "lastAccessed": 1783642155470,
+      "type": "file"
+    },
+    {
+      "path": "docs\\src\\ai\\prompts\\projects\\frontend.md",
+      "accessCount": 2,
+      "lastAccessed": 1783642264534,
       "type": "file"
     },
     {
@@ -178,6 +190,36 @@
       "accessCount": 1,
       "lastAccessed": 1783641192876,
       "type": "file"
+    },
+    {
+      "path": "docs\\src\\ai\\prompts\\projects\\index.md",
+      "accessCount": 1,
+      "lastAccessed": 1783641821172,
+      "type": "file"
+    },
+    {
+      "path": "docs\\src\\ai\\prompts\\projects\\backend.md",
+      "accessCount": 1,
+      "lastAccessed": 1783641839440,
+      "type": "file"
+    },
+    {
+      "path": "docs\\src\\ai\\prompts\\projects\\mobile.md",
+      "accessCount": 1,
+      "lastAccessed": 1783641854179,
+      "type": "file"
+    },
+    {
+      "path": "docs\\src\\ai\\prompts\\projects\\tools.md",
+      "accessCount": 1,
+      "lastAccessed": 1783641859593,
+      "type": "file"
+    },
+    {
+      "path": "docs\\src\\ai\\prompts\\projects",
+      "accessCount": 1,
+      "lastAccessed": 1783642226254,
+      "type": "directory"
     }
   ],
   "userDirectives": []

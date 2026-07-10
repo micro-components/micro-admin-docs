@@ -13,6 +13,7 @@ export const zh = defineConfig({
       "/dev/": { base: "/dev/", items: sidebarEnv() },
       "/docs/": { base: "/docs/", items: sidebarDocs() },
       "/ai/": { base: "/ai/", items: sidebarAi() },
+      "/ai/prompts/projects/": { base: "/ai/prompts/projects/", items: sidebarProjects() },
     },
 
     editLink: {
@@ -98,6 +99,11 @@ function nav(): DefaultTheme.NavItem[] {
       text: "AI编程",
       link: "/ai/",
       activeMatch: " /ai/",
+    },
+    {
+      text: "AI项目开发提示词",
+      link: "/ai/prompts/projects/",
+      activeMatch: " /ai/prompts/projects/",
     },
     {
       text: "捐助",
@@ -343,6 +349,21 @@ function sidebarAi(): DefaultTheme.SidebarItem[] {
         { text: "性能优化", link: "troubleshooting/performance" },
         { text: "网络问题", link: "troubleshooting/network" },
         { text: "调试技巧", link: "troubleshooting/debugging" },
+      ],
+    },
+  ];
+}
+function sidebarProjects(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: "AI项目开发提示词专栏",
+      items: [
+        { text: "专栏介绍", link: "index" },
+        { text: "前端开发提示词", link: "frontend" },
+        { text: "后端开发提示词", link: "backend" },
+        { text: "移动端开发提示词", link: "mobile" },
+        { text: "工具类提示词", link: "tools" },
+        { text: "文档生成提示词", link: "documentation" },
       ],
     },
   ];
